@@ -1,7 +1,11 @@
 #pragma once
+#include <vector>
 #include "Window.h"
 #include "Renderer.h"
 #include "Vector2.h"
+#include "Timer.h"
+#include "Actor.h"
+using std::vector;
 
 class Game
 {
@@ -17,8 +21,9 @@ public:
 	Game& operator=(Game&&) = delete;
 
 private:
-	Game() : 
-		isRunning(true), 
+	Game() :
+		isRunning(true),
+		isUpdatingActors(false),
 		ballPos({100,100}),
 		ballVelocity({500,500}),
 		paddlePos({50,100}),
@@ -35,14 +40,21 @@ public:
 	void loop();
 	void close();
 
+	void addActor(Actor* actor);
+	void removeActor(Actor* actor);
+
 private:
 	void processInput();
-	void update();
+	void update(float dt);
 	void render();
 
 	Window window;
 	bool isRunning;
 	Renderer renderer;
+
+	bool isUpdatingActors;
+	vector<Actor*> actors;
+	vector<Actor*> pendingActors;
 
 	Rectangle topWall;
 	Rectangle bottomWall;
