@@ -8,8 +8,8 @@ class Window
 {
 public:
 	Window();
-	Window(const Window&) = delete,
-		Window& operator =(const Window&) = delete;
+	Window(const Window&) = delete;
+	Window& operator =(const Window&) = delete;
 
 	bool initialize();
 	void close();
@@ -20,4 +20,4 @@ private:
 	SDL_Window* SDLWindow;
 	int width;
 	int height;
-}
+};
