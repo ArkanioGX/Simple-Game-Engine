@@ -63,12 +63,12 @@ private:
 
 	Vector2 ballPos;
 	Vector2 ballVelocity;
-	const float ballSize = 10;
+	const float ballSize = 30;
 
 	Vector2 paddlePos;
 	Vector2 paddleVelocity;
 	const float paddleWidth = 10;
-	const float paddleHeight = 64;
+	const float paddleHeight = 128;
 	float paddleDirection;
 };
 

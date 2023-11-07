@@ -1,5 +1,6 @@
 #include "Game.h"
 #include <iostream>
+#include <algorithm>
 
 bool Game::initialize() {
 	bool isWindowInit = window.initialize();
@@ -141,12 +142,12 @@ void Game::addActor(Actor* actor) {
 void Game::removeActor(Actor* actor) {
 	auto iter = std::find(begin(pendingActors), end(pendingActors), actor);
 	if (iter != end(pendingActors)) {
-		//std::iter_swap(iter,end(pendingActors)-1) Non existant
+		std::iter_swap(iter, end(pendingActors) - 1); 
 		pendingActors.pop_back();
 	}
 	iter = std::find(begin(actors), end(actors), actor);
 	if (iter != end(actors)) {
-		//std::iter_swap(iter,end(actors)-1) Non existant
+		std::iter_swap(iter, end(actors) - 1);
 		actors.pop_back();
 	}
 }
