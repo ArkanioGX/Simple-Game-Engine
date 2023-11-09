@@ -1,0 +1,21 @@
+﻿  Actor.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\Window.h(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL.h' : No such file or directory
+  Assets.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\Rectangle.h(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL_rect.h' : No such file or directory
+  Component.cpp
+  Game.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\Window.h(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL.h' : No such file or directory
+  Log.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\Log.h(4,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL_log.h' : No such file or directory
+  main.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\main.cpp(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL.h' : No such file or directory
+  Renderer.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\Rectangle.h(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL_rect.h' : No such file or directory
+  Texture.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\Rectangle.h(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL_rect.h' : No such file or directory
+  Timer.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\Timer.cpp(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL_timer.h' : No such file or directory
+  Vector2.cpp
+  Window.cpp
+D:\Projects\ArtFX\Advanced-OpenGL-Starter-Project\Simple-Game-Engine\Simple Game Engine\Window.h(2,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SDL.h' : No such file or directory
+  Génération de code en cours...

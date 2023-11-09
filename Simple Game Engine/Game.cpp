@@ -153,7 +153,7 @@ void Game::removeActor(Actor* actor) {
 }
 
 void Game::load() {
-	Assets::loadTexture(renderer,"Res\Ship01.png","ship01");
+	Assets::loadTexture(renderer,"Res/Ship01.png","ship01");
 }
 
 void Game::unload() {
