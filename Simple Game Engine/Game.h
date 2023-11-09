@@ -5,6 +5,8 @@
 #include "Vector2.h"
 #include "Timer.h"
 #include "Actor.h"
+#include "Assets.h"
+
 using std::vector;
 
 class Game
@@ -37,7 +39,9 @@ private:
 
 public:
 	bool initialize();
+	void load();
 	void loop();
+	void unload();
 	void close();
 
 	void addActor(Actor* actor);

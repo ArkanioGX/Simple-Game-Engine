@@ -151,3 +151,15 @@ void Game::removeActor(Actor* actor) {
 		actors.pop_back();
 	}
 }
+
+void Game::load() {
+	Assets::loadTexture(renderer,"Res\Ship01.png","ship01");
+}
+
+void Game::unload() {
+	while (!actors.empty()) {
+		delete actors.back();
+	}
+
+	Assets::clear();
+}
