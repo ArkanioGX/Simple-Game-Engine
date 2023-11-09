@@ -127,6 +127,8 @@ void Game::render() {
 	Rectangle paddleRect = { paddlePos.x - paddleWidth / 2, paddlePos.y - paddleHeight / 2,paddleWidth,paddleHeight };
 	renderer.drawRect(paddleRect);
 
+	renderer.draw();
+
 	renderer.endDraw();
 }
 
@@ -154,6 +156,9 @@ void Game::removeActor(Actor* actor) {
 
 void Game::load() {
 	Assets::loadTexture(renderer,"Res/Ship01.png","ship01");
+	auto actor = new Actor();
+	auto sprite = new SpriteComponent(actor, Assets::getTexture("ship01"));
+	actor->setPosition(Vector2{ 100,100 });
 }
 
 void Game::unload() {

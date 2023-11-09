@@ -6,6 +6,8 @@
 #include "Timer.h"
 #include "Actor.h"
 #include "Assets.h"
+#include "SpriteComponent.h"
+
 
 using std::vector;
 
@@ -46,6 +48,8 @@ public:
 
 	void addActor(Actor* actor);
 	void removeActor(Actor* actor);
+
+	Renderer& getRenderer() { return renderer; }
 
 private:
 	void processInput();
