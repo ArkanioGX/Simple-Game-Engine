@@ -1,4 +1,10 @@
 #include "Game.h"
+#include "Actor.h"
+#include "SpriteComponent.h"
+#include "AnimSpriteComponent.h"
+#include "Timer.h"
+#include "Assets.h"
+#include "BackgroundSpriteComponent.h"
 #include <iostream>
 #include <algorithm>
 
@@ -156,9 +162,44 @@ void Game::removeActor(Actor* actor) {
 
 void Game::load() {
 	Assets::loadTexture(renderer,"Res/Ship01.png","ship01");
-	auto actor = new Actor();
-	auto sprite = new SpriteComponent(actor, Assets::getTexture("ship01"));
+	Assets::loadTexture(renderer, "Res/Ship02.png", "ship02");
+	Assets::loadTexture(renderer, "Res/Ship03.png", "ship03");
+	Assets::loadTexture(renderer, "Res/Ship04.png", "ship04");
+	Assets::loadTexture(renderer, "Res/Farback01.png", "farback01");
+	Assets::loadTexture(renderer, "Res/Farback02.png", "farback02");
+	Assets::loadTexture(renderer, "Res/Stars.png", "Stars");
+
+	Actor* actor = new Actor();
+	SpriteComponent* sprite = new SpriteComponent(actor, Assets::getTexture("ship01"));
 	actor->setPosition(Vector2{ 100,100 });
+
+	vector<Texture*> animTextures{
+		&Assets::getTexture("ship01"),
+		&Assets::getTexture("ship02"),
+		&Assets::getTexture("ship03"),
+		&Assets::getTexture("ship04")
+	};
+	Actor* ship = new Actor();
+	AnimSpriteComponent* animatedSprite = new AnimSpriteComponent(ship, animTextures,200);
+	ship->setPosition(Vector2{ 100,300 });
+
+	vector<Texture*> bgTexsFar{
+		&Assets::getTexture("farback01"),
+		&Assets::getTexture("farback02")
+	};
+	Actor* bgFar = new Actor();
+	BackgroundSpriteComponent* bgSpriteFar = new BackgroundSpriteComponent(bgFar, bgTexsFar);
+	bgSpriteFar->setScrollSpeed(-100.0f);
+
+	vector<Texture*> bgTexsClose{
+		&Assets::getTexture("Stars"),
+		&Assets::getTexture("Stars")
+	};
+	Actor* bgClose = new Actor();
+	BackgroundSpriteComponent* bgSpriteClose = new BackgroundSpriteComponent(bgClose, bgTexsClose,150);
+	bgSpriteClose->setScrollSpeed(-200.0f);
+
+
 }
 
 void Game::unload() {
