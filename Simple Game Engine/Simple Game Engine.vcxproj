@@ -143,6 +143,7 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Random.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Maths.h" />
+    <ClInclude Include="Random.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="SpriteComponent.h" />

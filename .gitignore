@@ -35,3 +35,5 @@ x64/Debug/Simple Game Engine.pdb
 .vs/Simple Game Engine/v17/ipch/AutoPCH/99db6d4b60e72e3f/WINDOW.ipch
 .vs/Simple Game Engine/v17/ipch/AutoPCH/e9253ccb28a8f810/RENDERER.ipch
 *.obj
+*.vsidx
+*.ipch

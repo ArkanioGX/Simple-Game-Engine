@@ -1,8 +1,8 @@
 #include "AnimSpriteComponent.h"
 
 
-AnimSpriteComponent::AnimSpriteComponent(Actor* ownerP, const vector<Texture*>& textureP, int drawOrderP) :
-	SpriteComponent(ownerP, *textureP[0], drawOrderP),
+AnimSpriteComponent::AnimSpriteComponent(Actor* ownerP, const vector<Texture*>& textureP, int drawOrderP, Rectangle rP) :
+	SpriteComponent(ownerP, *textureP[0], drawOrderP, rP),
 	currentFrame(0.0f),
 	animFPS(24.0f)
 {

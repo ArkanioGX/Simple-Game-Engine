@@ -5,7 +5,7 @@ using std::vector;
 class AnimSpriteComponent : public SpriteComponent
 {
 public:
-	AnimSpriteComponent(Actor* ownerP, const vector<Texture*>& textureP, int drawOrderP = 100);
+	AnimSpriteComponent(Actor* ownerP, const vector<Texture*>& textureP, int drawOrderP = 100, Rectangle rP = Rectangle::nullRect);
 	virtual ~AnimSpriteComponent();
 	AnimSpriteComponent() = delete;
 	AnimSpriteComponent(const AnimSpriteComponent&) = delete;

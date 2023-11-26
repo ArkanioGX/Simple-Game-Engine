@@ -180,7 +180,7 @@ void Game::load() {
 		&Assets::getTexture("ship04")
 	};
 	Actor* ship = new Actor();
-	AnimSpriteComponent* animatedSprite = new AnimSpriteComponent(ship, animTextures,200);
+	AnimSpriteComponent* animatedSprite = new AnimSpriteComponent(ship, animTextures,200, Rectangle::nullRect);
 	ship->setPosition(Vector2{ 100,300 });
 
 	vector<Texture*> bgTexsFar{
@@ -196,7 +196,7 @@ void Game::load() {
 		&Assets::getTexture("Stars")
 	};
 	Actor* bgClose = new Actor();
-	BackgroundSpriteComponent* bgSpriteClose = new BackgroundSpriteComponent(bgClose, bgTexsClose,150);
+	BackgroundSpriteComponent* bgSpriteClose = new BackgroundSpriteComponent(bgClose, bgTexsClose,150, Rectangle::nullRect);
 	bgSpriteClose->setScrollSpeed(-200.0f);
 
 

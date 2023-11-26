@@ -6,7 +6,7 @@
 class SpriteComponent : public Component
 {
 public:
-	SpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP = 100);
+	SpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP = 100, Rectangle rP = Rectangle::nullRect);
 	virtual ~SpriteComponent();
 	SpriteComponent() = delete;
 	SpriteComponent(const SpriteComponent&) = delete;
@@ -24,5 +24,6 @@ protected:
 	int drawOrder;
 	int texWidth;
 	int texHeight;
+	Rectangle rect;
 };
 
