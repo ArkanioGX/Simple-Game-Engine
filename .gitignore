@@ -37,3 +37,5 @@ x64/Debug/Simple Game Engine.pdb
 *.obj
 *.vsidx
 *.ipch
+*.ipch
+*.ipch

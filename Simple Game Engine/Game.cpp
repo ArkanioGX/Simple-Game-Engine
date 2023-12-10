@@ -15,9 +15,6 @@ bool Game::initialize() {
 	int windowHeight = window.getHeight();
 	int windowWidth = window.getWidth();
 
-	topWall = { 0,0,static_cast<float>(windowWidth),wallThickness };
-	bottomWall = { 0,windowHeight - wallThickness,static_cast<float>(windowWidth),wallThickness };
-	rightWall = { windowWidth - wallThickness,0,wallThickness,static_cast<float>(windowHeight) };
 	return isWindowInit && isRendererInit;
 }
 
@@ -54,48 +51,9 @@ void Game::processInput() {
 	if (keyboardState[SDL_SCANCODE_ESCAPE]) {
 		isRunning = false;
 	}
-
-	
-	paddleDirection = keyboardState[SDL_SCANCODE_S] - keyboardState[SDL_SCANCODE_W];
 }
 
 void Game::update(float dt) {
-	paddlePos += paddleVelocity * dt * paddleDirection;
-
-	//Clamp Paddle Pos
-	paddlePos.y = fmax((paddleHeight / 2 + wallThickness), fmin(paddlePos.y, (window.getHeight() - paddleHeight/2 - wallThickness)));
-
-	//Ball move
-	ballPos += ballVelocity * dt;
-
-	if (ballPos.y < ballSize / 2 + wallThickness) {
-		ballPos.y = ballSize / 2 + wallThickness;
-		ballVelocity.y *= -1;
-	}
-	else if (ballPos.y > window.getHeight() - ballSize / 2 - wallThickness) {
-		ballPos.y = window.getHeight() - ballSize / 2 - wallThickness;
-		ballVelocity.y *= -1;
-	}
-
-	if (ballPos.x > window.getWidth() - ballSize / 2 - wallThickness) {
-		ballPos.x = window.getWidth() - ballSize / 2 - wallThickness;
-		ballVelocity.x *= -1;
-	}
-
-	//Ball Paddle collision
-	Vector2 diff = ballPos - paddlePos;
-
-	if (fabsf(diff.y) <= paddleHeight / 2 && fabsf(diff.x) <= paddleWidth / 2 + ballSize / 2 && ballVelocity.x < 0) {
-		ballVelocity.x *= -1;
-		ballPos.x = paddlePos.x + paddleWidth / 2 + ballSize / 2;
-	}
-
-	//Restart
-	if (ballPos.x < 0) {
-		ballVelocity.x *= -1;
-		ballPos.x = window.getWidth() / 2.f;
-	}
-
 	//Update Actors
 	isUpdatingActors = true;
 	for (auto actor : actors) {
@@ -122,16 +80,6 @@ void Game::update(float dt) {
 
 void Game::render() {
 	renderer.beginDraw();
-
-	renderer.drawRect(topWall);
-	renderer.drawRect(rightWall);
-	renderer.drawRect(bottomWall);
-
-	Rectangle ballRect = { ballPos.x - ballSize / 2,ballPos.y - ballSize / 2,ballSize,ballSize };
-	renderer.drawRect(ballRect);
-
-	Rectangle paddleRect = { paddlePos.x - paddleWidth / 2, paddlePos.y - paddleHeight / 2,paddleWidth,paddleHeight };
-	renderer.drawRect(paddleRect);
 
 	renderer.draw();
 
@@ -169,11 +117,14 @@ void Game::load() {
 	Assets::loadTexture(renderer, "Res/Farback02.png", "farback02");
 	Assets::loadTexture(renderer, "Res/Stars.png", "Stars");
 
-	Actor* actor = new Actor();
-	SpriteComponent* sprite = new SpriteComponent(actor, Assets::getTexture("ship01"));
-	actor->setPosition(Vector2{ 100,100 });
+	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
 
-	vector<Texture*> animTextures{
+	Actor* wallTest = new Actor();
+	SpriteComponent* wallSprite = new SpriteComponent(wallTest, Assets::getTexture("Tileset"), 300 ,{ 0.f, 0.f, 32.f, 32.f });
+	wallTest->setPosition(Vector2{ 100,400 });
+	wallTest->setScale(10);
+
+	/*vector<Texture*> animTextures{
 		&Assets::getTexture("ship01"),
 		&Assets::getTexture("ship02"),
 		&Assets::getTexture("ship03"),
@@ -181,7 +132,7 @@ void Game::load() {
 	};
 	Actor* ship = new Actor();
 	AnimSpriteComponent* animatedSprite = new AnimSpriteComponent(ship, animTextures,200, Rectangle::nullRect);
-	ship->setPosition(Vector2{ 100,300 });
+	ship->setPosition(Vector2{ 100,300 });*/
 
 	vector<Texture*> bgTexsFar{
 		&Assets::getTexture("farback01"),
