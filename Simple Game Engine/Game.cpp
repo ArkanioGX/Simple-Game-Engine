@@ -1,9 +1,11 @@
 #include "Game.h"
 #include "Actor.h"
 #include "SpriteComponent.h"
+#include "TileComponent.h"
 #include "AnimSpriteComponent.h"
 #include "Timer.h"
 #include "Assets.h"
+#include "Tileset.h"
 #include "BackgroundSpriteComponent.h"
 #include <iostream>
 #include <algorithm>
@@ -51,6 +53,12 @@ void Game::processInput() {
 	if (keyboardState[SDL_SCANCODE_ESCAPE]) {
 		isRunning = false;
 	}
+
+	isUpdatingActors = true;
+	for (auto actor:actors){
+		actor->processInput(keyboardState);
+	}
+	isUpdatingActors = false;
 }
 
 void Game::update(float dt) {
@@ -119,10 +127,7 @@ void Game::load() {
 
 	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
 
-	Actor* wallTest = new Actor();
-	SpriteComponent* wallSprite = new SpriteComponent(wallTest, Assets::getTexture("Tileset"), 300 ,{ 0.f, 0.f, 32.f, 32.f });
-	wallTest->setPosition(Vector2{ 100,400 });
-	wallTest->setScale(10);
+
 
 	/*vector<Texture*> animTextures{
 		&Assets::getTexture("ship01"),
