@@ -131,9 +131,44 @@ void Game::load() {
 	Player* player = new Player();
 	player->setPosition({ 100,300 });
 
-	Actor* wallAct = new Actor();
-	TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), 0);
-	wallAct->setScale(3);
+	float scale = 2;
+	for (int x = 0; x < 16; x++)
+	{
+		for (int y = 0; y < 12; y++)
+		{
+			Actor* wallAct = new Actor();
+			int TileID = 1;
+			if (x == 0 || x == 15 || y == 0 || y == 11) {
+				TileID = 0;
+			}
+			TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), TileID);
+			wallAct->setScale(scale);
+			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });
+		}
+	}
+
+	/*float scale = 2;
+	for (int x = 6; x < 8; x++)
+	{
+		for (int y = 4; y < 12; y++)
+		{
+			Actor* wallAct = new Actor();
+			TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), 0);
+			wallAct->setScale(scale);
+			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });
+		}
+	}
+
+	for (int x = 9; x < 11; x++)
+	{
+		for (int y = 4; y < 12; y++)
+		{
+			Actor* wallAct = new Actor();
+			TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), 0);
+			wallAct->setScale(scale);
+			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });
+		}
+	}*/
 
 	/*vector<Texture*> animTextures{
 		&Assets::getTexture("ship01"),
