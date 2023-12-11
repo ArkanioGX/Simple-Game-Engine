@@ -7,6 +7,7 @@
 #include "Assets.h"
 #include "Tileset.h"
 #include "BackgroundSpriteComponent.h"
+#include "Player.h"
 #include <iostream>
 #include <algorithm>
 
@@ -117,7 +118,7 @@ void Game::removeActor(Actor* actor) {
 }
 
 void Game::load() {
-	Assets::loadTexture(renderer,"Res/Ship01.png","ship01");
+	Assets::loadTexture(renderer,"Res/Ship01.png","Ship");
 	Assets::loadTexture(renderer, "Res/Ship02.png", "ship02");
 	Assets::loadTexture(renderer, "Res/Ship03.png", "ship03");
 	Assets::loadTexture(renderer, "Res/Ship04.png", "ship04");
@@ -127,7 +128,12 @@ void Game::load() {
 
 	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
 
+	Player* player = new Player();
+	player->setPosition({ 100,300 });
 
+	Actor* wallAct = new Actor();
+	TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), 0);
+	wallAct->setScale(3);
 
 	/*vector<Texture*> animTextures{
 		&Assets::getTexture("ship01"),
@@ -139,7 +145,7 @@ void Game::load() {
 	AnimSpriteComponent* animatedSprite = new AnimSpriteComponent(ship, animTextures,200, Rectangle::nullRect);
 	ship->setPosition(Vector2{ 100,300 });*/
 
-	vector<Texture*> bgTexsFar{
+	/*vector<Texture*> bgTexsFar{
 		&Assets::getTexture("farback01"),
 		&Assets::getTexture("farback02")
 	};
@@ -153,7 +159,7 @@ void Game::load() {
 	};
 	Actor* bgClose = new Actor();
 	BackgroundSpriteComponent* bgSpriteClose = new BackgroundSpriteComponent(bgClose, bgTexsClose,150, Rectangle::nullRect);
-	bgSpriteClose->setScrollSpeed(-200.0f);
+	bgSpriteClose->setScrollSpeed(-200.0f);*/
 
 
 }
