@@ -149,6 +149,7 @@
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TileComponent.cpp" />
@@ -171,10 +172,10 @@
     <ClInclude Include="Random.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TileComponent.h" />
-    <ClInclude Include="Tileset.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="Window.h" />
