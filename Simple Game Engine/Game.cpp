@@ -128,8 +128,8 @@ void Game::load() {
 
 	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
 
-	Player* player = new Player();
-	player->setPosition({ 100,300 });
+	player = new Player();
+	player->setPosition({ 10,300 });
 
 	float scale = 2;
 	for (int x = 0; x < 16; x++)
@@ -146,6 +146,8 @@ void Game::load() {
 			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });*/
 		}
 	}
+
+	player->getCollider()->checkCollision();
 
 	/*float scale = 2;
 	for (int x = 6; x < 8; x++)

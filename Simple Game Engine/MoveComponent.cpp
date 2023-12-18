@@ -2,6 +2,9 @@
 #include "Maths.h"
 #include "Actor.h"
 #include "Window.h"
+#include "Log.h"
+#include "Player.h"
+#include "Game.h"
 
 MoveComponent::MoveComponent(Actor* ownerP, int updateOrderP) : 
 	Component(ownerP,updateOrderP),
@@ -30,5 +33,7 @@ void MoveComponent::update(float dt)
 		Vector2 newPos = owner.getPosition() + velocity * dt;
 		owner.setPosition(newPos);
 	}
+	
+	owner.getGame().getPlayer()->getCollider()->checkCollision();
 }
 
