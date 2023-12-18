@@ -5,7 +5,7 @@
 #include "AnimSpriteComponent.h"
 #include "Timer.h"
 #include "Assets.h"
-#include "Tileset.h"
+#include "Wall.h"
 #include "BackgroundSpriteComponent.h"
 #include "Player.h"
 #include <iostream>
@@ -139,11 +139,11 @@ void Game::load() {
 			Actor* wallAct = new Actor();
 			int TileID = 1;
 			if (x == 0 || x == 15 || y == 0 || y == 11) {
-				TileID = 0;
+				Wall* w = new Wall({ float(x),float(y) }, 2);
 			}
-			TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), TileID);
+			/*TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), TileID);
 			wallAct->setScale(scale);
-			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });
+			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });*/
 		}
 	}
 
