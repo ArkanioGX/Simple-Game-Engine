@@ -7,8 +7,8 @@
 
 Player::Player() : Actor()
 {
-	SpriteComponent* sc = new SpriteComponent(this, Assets::getTexture("Tileset"),500);
-	c = new Collider(this, {0,0,Assets::getTexture("Tileset").getWidth() * getScale(),Assets::getTexture("Tileset").getHeight() * getScale()}, false);
+	SpriteComponent* sc = new SpriteComponent(this, Assets::getTexture("Player"),500);
+	c = new Collider(this, {0,-4,44,60}, false);
 	InputComponent* ic = new InputComponent(this,c);
 	ic->setMaxSpeed(300.f);
 	ic->setMaxAngularSpeed(Maths::twoPi);

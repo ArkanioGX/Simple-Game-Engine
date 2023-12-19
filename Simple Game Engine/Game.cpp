@@ -125,6 +125,7 @@ void Game::load() {
 	Assets::loadTexture(renderer, "Res/Farback01.png", "farback01");
 	Assets::loadTexture(renderer, "Res/Farback02.png", "farback02");
 	Assets::loadTexture(renderer, "Res/Stars.png", "Stars");
+	Assets::loadTexture(renderer, "Res/Hero.png", "Player");
 
 	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
 
@@ -148,6 +149,7 @@ void Game::load() {
 	}
 
 	player->getCollider()->checkCollision();
+	player->setScale(4);
 
 	/*float scale = 2;
 	for (int x = 6; x < 8; x++)

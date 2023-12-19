@@ -9,5 +9,5 @@ Wall::Wall(Vector2 pos = Vector2::zero, float size = 2) : Actor() {
 	setPosition({ 16 + pos.x * 32 * size,16 + pos.y * 32 * size });
 
 	TileComponent* tc =	new TileComponent(this, Assets::getTexture("Tileset"), 0);
-	Collider* c = new Collider(this, { getPosition().x,getPosition().y,32 * size,32 * size }, false);
+	Collider* c = new Collider(this, { -16,-16,64,64 }, false);
 }

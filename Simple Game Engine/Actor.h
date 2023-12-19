@@ -44,7 +44,7 @@ public:
 	void addComponent(Component* component);
 	void removeComponent(Component* component);
 
-	template <typename T> std::shared_ptr<T> GetComponent()
+	/*template <typename T> std::shared_ptr<T> GetComponent()
 	{
 		// Removed check to see if we are trying to get a class that 
 		// derives from component.
@@ -58,7 +58,7 @@ public:
 		}
 
 		return nullptr;
-	};
+	};*/
 
 private:
 	Game& game;

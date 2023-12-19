@@ -12,7 +12,7 @@ class Collider : public Component
 private :
 	bool canPassThrough = false;
 
-	Rectangle rect;
+	Rectangle crect ;
 
 	static std::vector<Collider*> collList;
 

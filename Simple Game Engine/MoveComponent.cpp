@@ -34,7 +34,7 @@ void MoveComponent::update(float dt)
 		Vector2 newPos = owner.getPosition() + velocity * dt;
 		Vector2 oldPos = owner.getPosition();
 		owner.setPosition({newPos.x, oldPos.y});
-		auto c = owner.GetComponent<Collider>();
+		//auto c = owner.GetComponent<Collider>();
 		if (collider->checkCollision().size() != 0) { newPos.x = oldPos.x; }
 		owner.setPosition(newPos);
 		if (collider->checkCollision().size() != 0) { newPos.y = oldPos.y; }
