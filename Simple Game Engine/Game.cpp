@@ -129,7 +129,7 @@ void Game::load() {
 	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
 
 	player = new Player();
-	player->setPosition({ 10,300 });
+	player->setPosition({ 100,300 });
 
 	float scale = 2;
 	for (int x = 0; x < 16; x++)

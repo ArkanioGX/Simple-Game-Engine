@@ -86,3 +86,4 @@ void Actor::removeComponent(Component* component) {
 		components.erase(iter);
 	}
 }
+

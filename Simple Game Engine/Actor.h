@@ -1,5 +1,7 @@
 #pragma once
 #include <vector>
+#include <memory>
+#include <set>
 #include "Vector2.h"
 #include <SDL_stdinc.h>
 
@@ -42,6 +44,22 @@ public:
 	void addComponent(Component* component);
 	void removeComponent(Component* component);
 
+	template <typename T> std::shared_ptr<T> GetComponent()
+	{
+		// Removed check to see if we are trying to get a class that 
+		// derives from component.
+
+		for (auto exisitingComponent : components)
+		{
+			if (std::dynamic_cast<T*>(p)(exisitingComponent))
+			{
+				return std::dynamic_cast<T*>(p)(exisitingComponent);
+			}
+		}
+
+		return nullptr;
+	};
+
 private:
 	Game& game;
 	ActorState state;
@@ -51,3 +69,5 @@ private:
 
 	vector<Component*> components;
 };
+
+

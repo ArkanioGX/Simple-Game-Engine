@@ -1,10 +1,12 @@
 #pragma once
 #include "Component.h"
 #include "Vector2.h"
+#include "Collider.h"
+
 class MoveComponent : public Component
 {
 public:
-	MoveComponent(Actor* ownerP, int updateOrder = 10);
+	MoveComponent(Actor* ownerP, Collider* coll = nullptr ,int updateOrder = 10 );
 	MoveComponent() = delete;
 	MoveComponent(const MoveComponent&) = delete;
 	MoveComponent& operator =(const MoveComponent&) = delete;
@@ -20,5 +22,7 @@ public:
 private:
 	Vector2 velocity;
 	float angularSpeed;
+
+	Collider* collider;
 };
 

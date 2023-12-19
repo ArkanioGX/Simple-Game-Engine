@@ -1,5 +1,6 @@
 #include "Component.h"
 #include "Actor.h"
+#include <string>
 
 Component::Component(Actor* ownerP, int updateOrderP) : owner(*ownerP), updateOrder(updateOrderP) {
 	owner.addComponent(this);
