@@ -2,6 +2,8 @@
 #include "Log.h"
 #include "Wall.h"
 #include "Ground.h"
+#include "Key.h"
+#include "Door.h"
 
 SceneLoader* SceneLoader::instance = nullptr;
 
@@ -28,6 +30,7 @@ void SceneLoader::load() {
 		for (int x = 0; x < sizeof(mapContent) / sizeof(mapContent[0]); x++) {
 			string currentTile = mapContent[x][y];
 			Tile* t;
+			Key* k;
 				switch (currentTile.at(0)) {
 				case '0':
 
@@ -36,6 +39,15 @@ void SceneLoader::load() {
 				case '1':
 
 					t = new Wall({ float(y),float(x) }, Scale);
+					break;
+				case '2':
+
+					t = new Door({ float(y),float(x) }, Scale, currentTile.at(1));
+					break;
+				case '3':
+
+					t = new Ground({ float(y),float(x) }, Scale);
+					k = new Key({ float(y),float(x) }, Scale, currentTile.at(1));
 					break;
 				default:
 

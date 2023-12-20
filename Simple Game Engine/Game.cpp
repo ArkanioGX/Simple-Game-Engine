@@ -128,14 +128,15 @@ void Game::load() {
 	Assets::loadTexture(renderer, "Res/Farback02.png", "farback02");
 	Assets::loadTexture(renderer, "Res/Stars.png", "Stars");
 	Assets::loadTexture(renderer, "Res/Hero.png", "Player");
-
+	Assets::loadTexture(renderer, "Res/Key.png", "Key");
 	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
+	
 
 	Actor* Scene = new Actor();
 	SceneLoader* sl = new SceneLoader(Scene);
 
 	player = new Player();
-	player->setPosition({ 100,300 });
+	player->setPosition({ 100,400 });
 
 	/*float scale = 2;
 	for (int x = 0; x < 16; x++)
