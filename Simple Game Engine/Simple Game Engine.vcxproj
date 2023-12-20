@@ -144,6 +144,7 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Door.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Ground.cpp" />
     <ClCompile Include="InputComponent.cpp" />
     <ClCompile Include="Key.cpp" />
     <ClCompile Include="Log.cpp" />
@@ -156,6 +157,7 @@
     <ClCompile Include="SceneLoader.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Tile.cpp" />
     <ClCompile Include="TileComponent.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Vector2.cpp" />
@@ -172,6 +174,7 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="Door.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Ground.h" />
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="Key.h" />
     <ClInclude Include="Log.h" />
@@ -184,6 +187,7 @@
     <ClInclude Include="SceneLoader.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="Tile.h" />
     <ClInclude Include="TileComponent.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Vector2.h" />

@@ -1,6 +1,7 @@
 #include "SceneLoader.h"
 #include "Log.h"
 #include "Wall.h"
+#include "Ground.h"
 
 SceneLoader* SceneLoader::instance = nullptr;
 
@@ -22,12 +23,24 @@ SceneLoader::~SceneLoader()
 }
 
 void SceneLoader::load() {
+	float Scale = 2;
 	for (int y = 0; y < sizeof(mapContent[0]) / sizeof(std::string); y++) {
 		for (int x = 0; x < sizeof(mapContent) / sizeof(mapContent[0]); x++) {
 			string currentTile = mapContent[x][y];
-			if (currentTile.at(0) == '1') {
-				Wall* w = new Wall({ float(y),float(x) }, 2);
-			}
+			Tile* t;
+				switch (currentTile.at(0)) {
+				case '0':
+
+					t = new Ground({ float(y),float(x) }, Scale);
+					break;
+				case '1':
+
+					t = new Wall({ float(y),float(x) }, Scale);
+					break;
+				default:
+
+					break;
+				}
 		}
 	}
 }

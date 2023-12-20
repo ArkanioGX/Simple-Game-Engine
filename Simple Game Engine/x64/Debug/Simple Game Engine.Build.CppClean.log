@@ -3,7 +3,6 @@ c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\tilecomponent.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\texture.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\spritecomponent.obj
-c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\scene.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\renderer.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\rectangle.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\random.obj
@@ -24,9 +23,15 @@ c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\wall.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\vector2.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\timer.obj
-c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\simple game engine.ilk
+c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\key.obj
+c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\door.obj
+c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\sceneloader.obj
+c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\tile.obj
+c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\ground.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\x64\debug\simple game engine.exe
+c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\simple game engine.ilk
 c:\users\mollet.clarence\documents\github\simple-game-engine\x64\debug\simple game engine.pdb
+c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\scene.obj
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\simple g.572c9a34.tlog\cl.command.1.tlog
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\simple g.572c9a34.tlog\cl.items.tlog
 c:\users\mollet.clarence\documents\github\simple-game-engine\simple game engine\x64\debug\simple g.572c9a34.tlog\cl.read.1.tlog

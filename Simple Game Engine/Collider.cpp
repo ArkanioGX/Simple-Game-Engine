@@ -23,11 +23,28 @@ std::vector<Collision*> Collider::checkCollision()
 	std::vector<Collision*> list = {};
 	for (Collider* c : collList)
 	{
-		if (c != this) {
+		if (c != this && !c->canPassThrough) {
 			Rectangle r1 = { owner.getPosition().x + crect.x ,owner.getPosition().y + crect.y,crect.width,crect.height};
 			Rectangle r2 = { c->getActor()->getPosition().x + c->crect.x ,c->getActor()->getPosition().y + c->crect.y,c->crect.width,c->crect.height};
 
 			if (checkRectangle(r1, r2)){
+				list.push_back(new Collision(c->getActor(), c));
+			}
+		}
+	}
+	return list;
+}
+
+std::vector<Collision*> Collider::checkTrigger()
+{
+	std::vector<Collision*> list = {};
+	for (Collider* c : collList)
+	{
+		if (c != this && c->canPassThrough) {
+			Rectangle r1 = { owner.getPosition().x + crect.x ,owner.getPosition().y + crect.y,crect.width,crect.height };
+			Rectangle r2 = { c->getActor()->getPosition().x + c->crect.x ,c->getActor()->getPosition().y + c->crect.y,c->crect.width,c->crect.height };
+
+			if (checkRectangle(r1, r2)) {
 				list.push_back(new Collision(c->getActor(), c));
 			}
 		}

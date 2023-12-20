@@ -30,6 +30,7 @@ public:
 	void removeCollider(Collider* c) { collList.erase(std::remove(collList.begin(), collList.end(), c), collList.end()); }
 
 	std::vector<Collision*> checkCollision();
+	std::vector<Collision*> checkTrigger();
 	bool checkRectangle(Rectangle r1, Rectangle r2);
 
 	Actor* getActor() { return &owner; };

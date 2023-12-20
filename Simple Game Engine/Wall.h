@@ -1,7 +1,8 @@
 #pragma once
 #include "Actor.h"
 #include "Vector2.h"
-class Wall : public Actor
+#include "Tile.h"
+class Wall : public Tile
 {
 public:
 	Wall(Vector2 pos, float size);
