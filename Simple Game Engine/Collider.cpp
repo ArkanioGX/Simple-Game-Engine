@@ -10,7 +10,6 @@ Collider::Collider(Actor* ownerP, Rectangle r, bool CPT = false) : Component(own
 	addCollider(this);
 
 	crect = r;
-	Log::info(std::to_string(r.x));
 	
 }
 
@@ -26,11 +25,9 @@ std::vector<Collision*> Collider::checkCollision()
 	{
 		if (c != this) {
 			Rectangle r1 = { owner.getPosition().x + crect.x ,owner.getPosition().y + crect.y,crect.width,crect.height};
-			//Log::info(std::to_string(rect.x));
 			Rectangle r2 = { c->getActor()->getPosition().x + c->crect.x ,c->getActor()->getPosition().y + c->crect.y,c->crect.width,c->crect.height};
 
 			if (checkRectangle(r1, r2)){
-				Log::info("If passed");
 				list.push_back(new Collision(c->getActor(), c));
 			}
 		}

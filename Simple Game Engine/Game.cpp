@@ -6,6 +6,7 @@
 #include "Timer.h"
 #include "Assets.h"
 #include "Wall.h"
+#include "SceneLoader.h"
 #include "BackgroundSpriteComponent.h"
 #include "Player.h"
 #include <iostream>
@@ -34,6 +35,7 @@ void Game::loop() {
 }
 
 void Game::close() {
+	Log::info("Closed");
 	renderer.close();
 	window.close();
 	SDL_Quit();
@@ -129,10 +131,13 @@ void Game::load() {
 
 	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
 
+	Actor* Scene = new Actor();
+	SceneLoader* sl = new SceneLoader(Scene);
+
 	player = new Player();
 	player->setPosition({ 100,300 });
 
-	float scale = 2;
+	/*float scale = 2;
 	for (int x = 0; x < 16; x++)
 	{
 		for (int y = 0; y < 12; y++)
@@ -142,14 +147,16 @@ void Game::load() {
 			if (x == 0 || x == 15 || y == 0 || y == 11) {
 				Wall* w = new Wall({ float(x),float(y) }, 2);
 			}
-			/*TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), TileID);
+			TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), TileID);
 			wallAct->setScale(scale);
-			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });*/
+			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });
 		}
-	}
+	}*/
 
 	player->getCollider()->checkCollision();
 	player->setScale(4);
+
+	
 
 	/*float scale = 2;
 	for (int x = 6; x < 8; x++)
@@ -204,6 +211,7 @@ void Game::load() {
 }
 
 void Game::unload() {
+
 	while (!actors.empty()) {
 		delete actors.back();
 	}

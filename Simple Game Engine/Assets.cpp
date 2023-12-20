@@ -25,7 +25,7 @@ void Assets::clear()
 	for (auto iter : textures) {
 		iter.second.unload();
 	}
-	textures; clear();
+	textures.clear();
 }
 
 Texture Assets::loadTextureFromFile(Renderer& renderer, const string& filename)
