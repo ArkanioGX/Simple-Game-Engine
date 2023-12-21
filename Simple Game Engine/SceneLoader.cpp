@@ -5,23 +5,27 @@
 #include "Key.h"
 #include "Door.h"
 
-SceneLoader* SceneLoader::instance = nullptr;
 
 SceneLoader::SceneLoader(Actor* ownerP) : Component(ownerP)
 {
-	if (instance == nullptr) {
-		instance = this;
-	}
-	else {
-		delete this;
-		return;
-	}
 	load();
 }
 
 SceneLoader::~SceneLoader()
 {
 	unload();
+}
+
+void SceneLoader::checkDoors(char c)
+{
+	Log::info("Door Checked");
+	for (doorInfo d : DoorList) {
+		if (d.d->getDoorController()->checkKeyID(c)) {
+			Tile* t = new Ground({ float(d.pos.x),float(d.pos.y) }, d.scale);
+			d.d->getDoorController()->destroyDoor();
+			
+		}
+	}
 }
 
 void SceneLoader::load() {
@@ -31,6 +35,8 @@ void SceneLoader::load() {
 			string currentTile = mapContent[x][y];
 			Tile* t;
 			Key* k;
+			Door* d;
+			doorInfo di;
 				switch (currentTile.at(0)) {
 				case '0':
 
@@ -41,13 +47,18 @@ void SceneLoader::load() {
 					t = new Wall({ float(y),float(x) }, Scale);
 					break;
 				case '2':
+					d = new Door({ float(y),float(x) }, Scale, currentTile.at(1));
+					t = d;
+					di.d = d;
+					di.pos = { float(y),float(x) };
+					di.scale = Scale;
+					DoorList.push_back(di);
 
-					t = new Door({ float(y),float(x) }, Scale, currentTile.at(1));
 					break;
 				case '3':
 
 					t = new Ground({ float(y),float(x) }, Scale);
-					k = new Key({ float(y),float(x) }, Scale, currentTile.at(1));
+					k = new Key({ float(y),float(x) }, Scale, currentTile.at(1), this);
 					break;
 				default:
 
@@ -56,6 +67,8 @@ void SceneLoader::load() {
 		}
 	}
 }
+
+
 
 void SceneLoader::unload()
 {

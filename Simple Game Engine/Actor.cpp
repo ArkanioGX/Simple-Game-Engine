@@ -2,6 +2,7 @@
 #include <algorithm>
 #include "Game.h"
 #include "Component.h"
+#include "Collision.h"
 #include "Maths.h"
 
 Actor::Actor() :
@@ -84,6 +85,12 @@ void Actor::removeComponent(Component* component) {
 	auto iter = std::find(begin(components), end(components), component);
 	if (iter != end(components)) {
 		components.erase(iter);
+	}
+}
+
+void Actor::OnTrigger(Collision* coll) {
+	for (auto component : components) {
+		component->OnTrigger(coll);
 	}
 }
 

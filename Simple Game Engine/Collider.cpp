@@ -43,9 +43,12 @@ std::vector<Collision*> Collider::checkTrigger()
 		if (c != this && c->canPassThrough) {
 			Rectangle r1 = { owner.getPosition().x + crect.x ,owner.getPosition().y + crect.y,crect.width,crect.height };
 			Rectangle r2 = { c->getActor()->getPosition().x + c->crect.x ,c->getActor()->getPosition().y + c->crect.y,c->crect.width,c->crect.height };
-
 			if (checkRectangle(r1, r2)) {
-				list.push_back(new Collision(c->getActor(), c));
+				Collision* coll = new Collision(c->getActor(), c);
+				list.push_back(coll);
+				owner.OnTrigger(coll);
+				c->getActor()->OnTrigger(new Collision(&owner, this));
+
 			}
 		}
 	}

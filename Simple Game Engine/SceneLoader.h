@@ -6,6 +6,13 @@
 class Door;
 class SceneLoader : Component
 {
+public:
+	struct doorInfo
+	{
+		Door* d;
+		Vector2 pos;
+		float scale;
+	};
 private:
 	Vector2 tileSetSize;
 	/// <summary>
@@ -29,18 +36,18 @@ private:
 		{"1","0","0","0","0","0","0","0","0","0","0","0","0","0","0","1"},
 		{"1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1"}, };
 
-	//std::vector<Door*> DoorList;
+	std::vector<doorInfo > DoorList;
 
 	Actor* mapActors[16][12];
 
 public:
-	static SceneLoader* instance;
-
 	SceneLoader(Actor* ownerP);
 	~SceneLoader();
 	SceneLoader() = delete;
 	SceneLoader(const SceneLoader&) = delete;
 	SceneLoader& operator=(const SceneLoader&) = delete;
+
+	void checkDoors(char c);
 
 	void load();
 	void unload();

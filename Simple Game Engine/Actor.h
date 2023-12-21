@@ -9,6 +9,7 @@ using std::vector;
 
 class Game;
 class Component;
+class Collision;
 
 class Actor
 {
@@ -17,6 +18,11 @@ public:
 	enum class ActorState
 	{
 		Active, Paused, Dead
+	};
+
+	enum class Tag
+	{
+		Wall, Pickup, Player, None
 	};
 
 	Actor();
@@ -37,6 +43,7 @@ public:
 	void setPosition(Vector2 positionP);
 	void setScale(float scaleP);
 	void setRotation(float rotation);
+	void setState(ActorState as) { state = as; };
 
 	void update(float dt);
 	void updateComponents(float dt);
@@ -44,7 +51,11 @@ public:
 	void addComponent(Component* component);
 	void removeComponent(Component* component);
 
-	/*template <typename T> std::shared_ptr<T> GetComponent()
+	void OnTrigger(Collision* coll);
+
+	Tag getTag() { return actorTag; };
+
+	/*template <typename T*> std::shared_ptr<T> GetComponent()
 	{
 		// Removed check to see if we are trying to get a class that 
 		// derives from component.
@@ -66,6 +77,7 @@ private:
 	Vector2 position;
 	float scale;
 	float rotation;  // Rotation in radians.
+	Tag actorTag;
 
 	vector<Component*> components;
 };

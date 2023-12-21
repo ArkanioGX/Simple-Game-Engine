@@ -4,7 +4,7 @@
 #include "Collider.h"
 #include "Log.h"
 
-Tile::Tile(Vector2 p, float s,bool hasCollider, bool CPT, int tid) : pos(p),canPassThrough(CPT),size(s)
+Tile::Tile(Vector2 p, float s,bool hasCollider, bool CPT, int tid) : Actor(), pos(p),canPassThrough(CPT),size(s)
 {
 	Texture& tex = Assets::getTexture("Tileset");
 

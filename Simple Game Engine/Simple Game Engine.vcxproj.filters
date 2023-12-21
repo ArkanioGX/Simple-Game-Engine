@@ -99,6 +99,15 @@
     <ClCompile Include="Ground.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="KeyController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerPickup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DoorController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -183,6 +192,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Ground.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerPickup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DoorController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
