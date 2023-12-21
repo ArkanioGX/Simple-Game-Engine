@@ -19,12 +19,16 @@ SceneLoader::~SceneLoader()
 void SceneLoader::checkDoors(char c)
 {
 	Log::info("Door Checked");
+	std::vector<doorInfo> toErase;
 	for (doorInfo d : DoorList) {
 		if (d.d->getDoorController()->checkKeyID(c)) {
 			Tile* t = new Ground({ float(d.pos.x),float(d.pos.y) }, d.scale);
 			d.d->getDoorController()->destroyDoor();
-			
+			toErase.push_back(d);
 		}
+	}
+	for (doorInfo d : toErase) {
+		DoorList.erase(std::remove(DoorList.begin(), DoorList.end(), d), DoorList.end());
 	}
 }
 

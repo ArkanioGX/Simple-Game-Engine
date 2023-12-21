@@ -136,7 +136,7 @@ void Game::load() {
 	SceneLoader* sl = new SceneLoader(Scene);
 
 	player = new Player();
-	player->setPosition({ 100,400 });
+	player->setPosition({ 128,600 });
 
 	/*float scale = 2;
 	for (int x = 0; x < 16; x++)

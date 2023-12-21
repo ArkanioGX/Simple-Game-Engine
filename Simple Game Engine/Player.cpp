@@ -9,7 +9,7 @@
 Player::Player() : Actor()
 {
 	SpriteComponent* sc = new SpriteComponent(this, Assets::getTexture("Player"),500);
-	c = new Collider(this, {0,-4,44,60}, false);
+	c = new Collider(this, {0,0,44,56}, false);
 	InputComponent* ic = new InputComponent(this,c);
 	PlayerPickup* pp = new PlayerPickup(this, c);
 	ic->setMaxSpeed(300.f);
