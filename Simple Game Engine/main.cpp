@@ -9,9 +9,7 @@ int main(int argc, char** argv)
 	if (isGameInit) {
 		Game::instance().load();
 		Game::instance().loop();
-		Log::info("Test");
 		Game::instance().unload();
-		Log::info("Test 2");
 	}
 	Game::instance().close();
 	return 0;

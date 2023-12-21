@@ -13,7 +13,6 @@ KeyController::KeyController(Actor* ownerP, char id, SceneLoader* sl) :Component
 
 void KeyController::OnTrigger(Collision* coll)
 {
-	Log::info("test");
 	scene->checkDoors(keyID);
 	owner.setState(Actor::ActorState::Dead);
 }
