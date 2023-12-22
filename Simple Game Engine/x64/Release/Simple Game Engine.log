@@ -1,82 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿  Actor.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Actor.h(6,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  AnimSpriteComponent.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Assets.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Rectangle.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_rect.h': No such file or directory
-  BackgroundSpriteComponent.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Collider.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Collision.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Component.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Door.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Actor.h(6,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  DoorController.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Game.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Window.h(2,10): fatal  error C1083: Cannot open include file: 'SDL.h': No such file or directory
-  Ground.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Actor.h(6,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  InputComponent.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Key.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Actor.h(6,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  KeyController.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Log.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Log.h(4,10): fatal  error C1083: Cannot open include file: 'SDL_log.h': No such file or directory
-  main.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\main.cpp(2,10): fatal  error C1083: Cannot open include file: 'SDL.h': No such file or directory
-  MoveComponent.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Player.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Actor.h(6,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  PlayerPickup.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Random.cpp
-  Compiling...
-  Rectangle.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Rectangle.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_rect.h': No such file or directory
-  Renderer.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Rectangle.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_rect.h': No such file or directory
-  SceneLoader.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  SpriteComponent.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Texture.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Rectangle.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_rect.h': No such file or directory
-  Tile.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Actor.h(6,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  TileComponent.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Component.h(2,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Timer.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Timer.cpp(2,10): fatal  error C1083: Cannot open include file: 'SDL_timer.h': No such file or directory
-  Wall.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Actor.h(6,10): fatal  error C1083: Cannot open include file: 'SDL_stdinc.h': No such file or directory
-  Window.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\Window.h(2,10): fatal  error C1083: Cannot open include file: 'SDL.h': No such file or directory
-=======
-﻿  Game.cpp
-  KeyController.cpp
-  SceneLoader.cpp
-  main.cpp
+﻿  AnimSpriteComponent.cpp
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\AnimSpriteComponent.cpp(38,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\AnimSpriteComponent.cpp(45,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\AnimSpriteComponent.cpp(46,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   Generating code
-  4 of 898 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+  95 of 937 functions (10.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    2 functions had inline decision re-evaluated but remain unchanged
+    44 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Simple Game Engine.vcxproj -> C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\x64\Release\Simple Game Engine.exe
->>>>>>> parent of 5829262 (Test build)
-=======
-﻿  Generating code
-  0 of 898 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Simple Game Engine.vcxproj -> C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\x64\Release\Simple Game Engine.exe
->>>>>>> parent of e3c4774 (Redoing Project setup)

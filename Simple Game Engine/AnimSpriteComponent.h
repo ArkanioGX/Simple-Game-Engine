@@ -5,21 +5,24 @@ using std::vector;
 class AnimSpriteComponent : public SpriteComponent
 {
 public:
-	AnimSpriteComponent(Actor* ownerP, const vector<Texture*>& textureP, int drawOrderP = 100, Rectangle rP = Rectangle::nullRect);
+	AnimSpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP = 100, int tileSize = 16);
 	virtual ~AnimSpriteComponent();
 	AnimSpriteComponent() = delete;
 	AnimSpriteComponent(const AnimSpriteComponent&) = delete;
 	AnimSpriteComponent& operator=(const AnimSpriteComponent&) = delete;
 
 	float getAnimFps() const { return animFPS; }
-	void setAnimTextures(const vector<Texture*>& texturesP);
 	void setAnimFPS(float animFPSP);
 
 	void update(float dt);
 
 private:
-	vector<Texture*> animTextures;
+	vector<Rectangle> rectList;
 	float currentFrame;
 	float animFPS;
+
+	int size;
+
+	Rectangle getRectFromFrame(int id);
 };
 

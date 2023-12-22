@@ -1,25 +1,25 @@
 #include "AnimSpriteComponent.h"
+#include "Log.h"
 
-
-AnimSpriteComponent::AnimSpriteComponent(Actor* ownerP, const vector<Texture*>& textureP, int drawOrderP, Rectangle rP) :
-	SpriteComponent(ownerP, *textureP[0], drawOrderP, rP),
+AnimSpriteComponent::AnimSpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP, int tileSize) :
+	SpriteComponent(ownerP, textureP, drawOrderP, Rectangle::nullRect),
 	currentFrame(0.0f),
-	animFPS(24.0f)
+	animFPS(12.0f),
+	size(tileSize)
 {
-	setAnimTextures(textureP);
+	int nRow = texture.getWidth() / size;
+	int nColl = texture.getHeight() / size;
+
+	int lastFrame = nRow * nColl;
+
+	for (int i = 0; i < lastFrame; i++) {
+		Rectangle r = getRectFromFrame(i);
+		rectList.push_back(r);
+	}
 }
 
 AnimSpriteComponent::~AnimSpriteComponent()
 {
-}
-
-void AnimSpriteComponent::setAnimTextures(const vector<Texture*>& texturesP)
-{
-	animTextures = texturesP;
-	if (animTextures.size() > 0) {
-		currentFrame = 0.f;
-		setTexture(*animTextures[0]);
-	}
 }
 
 void AnimSpriteComponent::setAnimFPS(float animFPSP)
@@ -30,12 +30,20 @@ void AnimSpriteComponent::setAnimFPS(float animFPSP)
 void AnimSpriteComponent::update(float dt)
 {
 	SpriteComponent::update(dt);
-
-	if (animTextures.size() > 0) {
+	if (rectList.size() > 0) {
 		currentFrame += animFPS * dt;
-		while (currentFrame >= animTextures.size()) {
-			currentFrame -= animTextures.size();
+		while (currentFrame >= rectList.size()) {
+			currentFrame -= rectList.size();
 		}
-		setTexture(*animTextures[static_cast<int>(currentFrame)]);
+		rect = getRectFromFrame(currentFrame);
 	}
+}
+
+Rectangle AnimSpriteComponent::getRectFromFrame(int id) {
+	int nRow = texture.getWidth() / size;
+
+	float x = int(id % nRow) * size;
+	float y = int(id / nRow) * size;
+
+	return { x,y,float(size),float(size) };
 }
