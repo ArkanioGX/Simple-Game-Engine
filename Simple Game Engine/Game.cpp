@@ -35,7 +35,6 @@ void Game::loop() {
 }
 
 void Game::close() {
-	Log::info("Closed");
 	renderer.close();
 	window.close();
 	SDL_Quit();

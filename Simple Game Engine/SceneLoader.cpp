@@ -18,7 +18,6 @@ SceneLoader::~SceneLoader()
 
 void SceneLoader::checkDoors(char c)
 {
-	Log::info("Door Checked");
 	std::vector<doorInfo> toErase;
 	for (doorInfo d : DoorList) {
 		if (d.d->getDoorController()->checkKeyID(c)) {
