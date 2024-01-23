@@ -29,7 +29,8 @@ public:
 private:
 	Game() :
 		isRunning(true),
-		isUpdatingActors(false)
+		isUpdatingActors(false),
+		player(nullptr)
 	{}
 
 public:

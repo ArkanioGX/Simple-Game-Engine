@@ -2,7 +2,6 @@
 #include <SDL.h>
 #include "Game.h"
 
-using std::cout;
 int main(int argc, char** argv)
 {
 	bool isGameInit = Game::instance().initialize();

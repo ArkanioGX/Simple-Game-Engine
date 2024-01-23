@@ -1,5 +1,8 @@
 #include "Window.h"
 #include "Log.h"
+
+
+
 Window::Window() : RenderWindow(nullptr), width(WINDOW_WIDTH), height(WINDOW_HEIGHT)
 {
 }

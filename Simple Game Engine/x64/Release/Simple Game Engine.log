@@ -1,10 +1,7 @@
-﻿  AnimSpriteComponent.cpp
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\AnimSpriteComponent.cpp(38,27): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\AnimSpriteComponent.cpp(45,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\Simple Game Engine\AnimSpriteComponent.cpp(46,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+﻿  main.cpp
   Generating code
-  95 of 937 functions (10.1%) were compiled, the rest were copied from previous compilation.
+  755 of 937 functions (80.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    44 functions had inline decision re-evaluated but remain unchanged
+    32 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Simple Game Engine.vcxproj -> C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\x64\Release\Simple Game Engine.exe
