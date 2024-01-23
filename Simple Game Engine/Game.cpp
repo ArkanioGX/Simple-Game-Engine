@@ -119,13 +119,6 @@ void Game::removeActor(Actor* actor) {
 }
 
 void Game::load() {
-	Assets::loadTexture(renderer,"Res/Ship01.png","Ship");
-	Assets::loadTexture(renderer, "Res/Ship02.png", "ship02");
-	Assets::loadTexture(renderer, "Res/Ship03.png", "ship03");
-	Assets::loadTexture(renderer, "Res/Ship04.png", "ship04");
-	Assets::loadTexture(renderer, "Res/Farback01.png", "farback01");
-	Assets::loadTexture(renderer, "Res/Farback02.png", "farback02");
-	Assets::loadTexture(renderer, "Res/Stars.png", "Stars");
 	Assets::loadTexture(renderer, "Res/Hero.png", "Player");
 	Assets::loadTexture(renderer, "Res/Anim_Key_Sheet.png", "Key");
 	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");

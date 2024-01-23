@@ -45,11 +45,11 @@ void BackgroundSpriteComponent::update(float dt)
 	}
 }
 
-void BackgroundSpriteComponent::draw(Renderer& renderer)
+void BackgroundSpriteComponent::draw(IRenderer& renderer)
 {
 	for (auto& bg : textures) {
 		owner.setPosition(Vector2(bg.offset.x, bg.offset.y));
-		renderer.drawSprite(owner, bg.texture, Rectangle::nullRect, Vector2::zero, Renderer::Flip::None);
+		renderer.drawSprite(owner, bg.texture, Rectangle::nullRect, Vector2::zero, IRenderer::Flip::None);
 	}
 }
 

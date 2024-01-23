@@ -16,7 +16,7 @@ void Texture::unload() {
 	}
 }
 
-bool Texture::load(Renderer& renderer, const string& filenameP) {
+bool Texture::load(IRenderer& renderer, const string& filenameP) {
 	filename = filenameP;
 
 	SDL_Surface* surf = IMG_Load(filename.c_str());
@@ -27,7 +27,8 @@ bool Texture::load(Renderer& renderer, const string& filenameP) {
 	width = surf->w;
 	height = surf->h;
 
-	SDLTexture = SDL_CreateTextureFromSurface(renderer.toSDLRenderer(), surf);
+	RendererSDL& rendererSDL = dynamic_cast<RendererSDL&>(renderer);
+	SDLTexture = SDL_CreateTextureFromSurface(rendererSDL.toSDLRenderer(), surf);
 	SDL_FreeSurface(surf);
 	if (!SDLTexture) {
 		Log::error(LogCategory::Render, "Failed to convert surface to texture for " + filename);
