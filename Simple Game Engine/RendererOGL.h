@@ -5,8 +5,9 @@
 
 #include <vector>
 
-class RendererOGL : IRenderer
+class RendererOGL : public IRenderer
 {
+public:
 	RendererOGL();
 	virtual ~RendererOGL();
 	RendererOGL(const RendererOGL&) = delete;
@@ -30,6 +31,6 @@ private:
 	Window* window;
 	VertexArray* vertexArray;
 	SDL_GLContext context;
-	std::vector<class SpriteComponent*> sprite;
+	std::vector<class SpriteComponent*> sprites;
 };
 

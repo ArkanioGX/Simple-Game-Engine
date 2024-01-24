@@ -52,3 +52,40 @@ void RendererOGL::beginDraw() {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
+
+void RendererOGL::draw() {
+	drawSprites();
+}
+
+void RendererOGL::drawSprite(const Actor& actor, const Texture& tex, Rectangle srcRect, Vector2 origin, Flip flip) const
+{
+}
+
+void RendererOGL::endDraw() {
+	SDL_GL_SwapWindow(window->getSDLWindow());
+}
+
+void RendererOGL::close() {
+	SDL_GL_DeleteContext(context);
+	delete vertexArray;
+}
+
+void RendererOGL::addSprite(SpriteComponent* sprite) {
+	int spriteDrawOrder = sprite->getDrawOrder();
+	auto iter = std::begin(sprites);
+	for (; iter != end(sprites); ++iter) {
+		if (spriteDrawOrder < (*iter)->getDrawOrder())break;
+	}
+	sprites.insert(iter, sprite);
+}
+
+void RendererOGL::removeSprite(SpriteComponent* sprite) {
+	auto iter = std::find(begin(sprites), end(sprites), sprite);
+	sprites.erase(iter);
+}
+
+void RendererOGL::drawSprites() {
+	for (auto sprite : sprites) {
+		sprite->draw(*this);
+	}
+}

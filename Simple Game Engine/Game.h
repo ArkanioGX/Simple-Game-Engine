@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include "Window.h"
-#include "RendererSDL.h"
+#include "RendererOGL.h"
 #include "Vector2.h"
 #include "Timer.h"
 #include "Actor.h"
@@ -45,8 +45,8 @@ public:
 	void addActor(Actor* actor);
 	void removeActor(Actor* actor);
 
-	RendererSDL& getRenderer() { return renderer; }
-	IRenderer::Type type() { return IRenderer::Type::SDL;}
+	RendererOGL& getRenderer() { return renderer; }
+	IRenderer::Type type() { return IRenderer::Type::OGL;}
 
 private:
 	void processInput();
@@ -55,7 +55,7 @@ private:
 
 	Window window;
 	bool isRunning;
-	RendererSDL renderer;
+	RendererOGL renderer;
 
 	Player* player;
 
