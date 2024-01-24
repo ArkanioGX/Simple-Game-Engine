@@ -2,6 +2,7 @@
 #include <string>
 using std::string;
 #include <SDL_log.h>
+
 enum class LogCategory
 {
 	Application = SDL_LOG_CATEGORY_APPLICATION,
@@ -14,9 +15,9 @@ enum class LogCategory
 	Test = SDL_LOG_CATEGORY_TEST,
 	Video = SDL_LOG_CATEGORY_VIDEO
 };
+
 class Log {
 public:
-
 	Log() = delete;
 	Log(const Log&) = delete;
 	Log& operator=(const Log&) = delete;

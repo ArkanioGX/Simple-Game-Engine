@@ -5,28 +5,28 @@
 class InputComponent : public MoveComponent
 {
 public:
-	InputComponent(Actor* ownerP, Collider* coll);
+	InputComponent(Actor* ownerP);
 	InputComponent() = delete;
 	InputComponent(const InputComponent&) = delete;
 	InputComponent& operator=(const InputComponent&) = delete;
 
 	void processInput(const Uint8* keyState);
 
-	void setMaxSpeed(float maxSpeedP);
+	void setMaxForwardSpeed(float maxForwardSpeedP);
 	void setMaxAngularSpeed(float maxAngularSpeedP);
-	void setUpKey(int key);
-	void setDownKey(int key);
-	void setLeftKey(int key);
-	void setRightKey(int key);
+	void setForwardKey(int key);
+	void setBackKey(int key);
+	void setClockwiseKey(int key);
+	void setCounterClockwiseKey(int key);
+
 
 private:
-
-	float maxSpeed;
+	float maxForwardSpeed;
 	float maxAngularSpeed;
 
-	int upKey;
-	int downKey;
-	int leftKey;
-	int rightKey;
+	int forwardKey;
+	int backKey;
+	int clockwiseKey;
+	int counterClockwiseKey;
 };
 

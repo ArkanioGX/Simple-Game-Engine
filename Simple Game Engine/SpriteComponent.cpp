@@ -2,17 +2,14 @@
 #include "Actor.h"
 #include "Game.h"
 
-
-SpriteComponent::SpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP, Rectangle rP) :
+SpriteComponent::SpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP):
 	Component(ownerP),
-	texture(textureP),
-	drawOrder(drawOrderP),
+	texture(textureP), 
+	drawOrder(drawOrderP), 
 	texWidth(textureP.getWidth()),
-	texHeight(textureP.getHeight()),
-	rect(rP)
+	texHeight(textureP.getHeight())
 {
 	owner.getGame().getRenderer().addSprite(this);
-
 }
 
 SpriteComponent::~SpriteComponent()
@@ -29,5 +26,6 @@ void SpriteComponent::setTexture(const Texture& textureP)
 void SpriteComponent::draw(IRenderer& renderer)
 {
 	Vector2 origin{ texWidth / 2.f, texHeight / 2.f };
-	renderer.drawSprite(owner, texture, rect, origin, IRenderer::Flip::None);
+	renderer.drawSprite(owner, texture, Rectangle::nullRect, origin, IRenderer::Flip::None);
 }
+

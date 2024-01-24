@@ -1,15 +1,15 @@
 #pragma once
 
 constexpr float vertices[] = {
-	-0.5f,0.5f,0,	//0,0, //Top Left
-	0.5f,0.5f,0,	//1,0, //Top Right
-	-0.5f,-0.5f,0,	//1,1, //Bottom Left
-	0.5f,-0.5f,0	//0,1, //Bottom Right
+	-0.5f,  0.5f, 0.f, 0.f, 0.f, // top left
+	 0.5f,  0.5f, 0.f, 1.f, 0.f, // top right
+	 0.5f, -0.5f, 0.f, 1.f, 1.f, // bottom right
+	-0.5f, -0.5f, 0.f, 0.f, 1.f  // bottom left
 };
 
 constexpr unsigned int indices[] = {
-	0,1,2,
-	2,3,0
+	0, 1, 2,
+	2, 3, 0
 };
 
 class VertexArray
@@ -20,15 +20,17 @@ public:
 
 	void setActive();
 
-	unsigned int getNbVertices() const { return nbVertices; };
-	unsigned int getNbIndices() const { return nbIndices; };
-
+	unsigned int getNbVertices() const { return nbVertices; }
+	unsigned int getNbIndices() const { return nbIndices; }
 private:
 	unsigned int nbVertices;
 	unsigned int nbIndices;
 
-	unsigned int vertexArray;
+	// OpenGL ID of the vertex buffer
 	unsigned int vertexBuffer;
+	// OpenGL ID of the index buffer
 	unsigned int indexBuffer;
+	// OpenGL ID of the vertex array object
+	unsigned int vertexArray;
 };
 

@@ -1,8 +1,7 @@
 #pragma once
 #include <SDL_stdinc.h>
 
-class Collision;
-class Actor; 
+class Actor;
 
 class Component
 {
@@ -15,14 +14,12 @@ public:
 
 	int getUpdateOrder() const { return updateOrder; }
 
-	virtual void update(float dt);
-
 	virtual void processInput(const Uint8* keyState);
-
-	virtual void OnTrigger(Collision* coll);
+	virtual void update(float dt);
+	virtual void onUpdateWorldTransform() { };
 
 protected:
 	Actor& owner;
-	int updateOrder;
+	int updateOrder;		// Order of the component in the actor's updateComponent method
 };
 

@@ -1,58 +1,72 @@
 #include "Assets.h"
-#include "Log.h"
+#include <iostream>
 #include <sstream>
+#include <fstream>
+#include "Log.h"
+#include "RendererOGL.h"
 
-std::map<string, Texture> Assets::textures;
-std::map<string, Shader> Assets::shaders;
+std::map<std::string, Texture> Assets::textures;
+std::map<std::string, Shader> Assets::shaders;
 
 Texture Assets::loadTexture(IRenderer& renderer, const string& filename, const string& name)
 {
-	textures[name] = loadTextureFromFile(renderer, filename.c_str());
-	return textures[name];
+    textures[name] = loadTextureFromFile(renderer, filename.c_str());
+    return textures[name];
 }
 
-Texture& Assets::getTexture(const std::string& name)
+Texture& Assets::getTexture(const string& name) 
 {
-	if (textures.find(name) == end(textures)) {
-		std::ostringstream loadError;
-		loadError << "Texture " << name << " does not exist in assets manager";
-		Log::error(LogCategory::Application, loadError.str());
-	}
-	return textures[name];
+    if (textures.find(name) == end(textures))
+    {
+        std::ostringstream loadError;
+        loadError << "Texture " << name << " does not exist in assets manager.";
+        Log::error(LogCategory::Application, loadError.str());
+    }
+    return textures[name];
 }
 
-Shader Assets::loadShader(const string& vShaderFile, const string& fShaderFile, const string& tcShaderFile, const string& teShaderFile, const string& gShaderFile, const string& name)
+Shader Assets::loadShader(const std::string& vShaderFile, const std::string& fShaderFile, const std::string& tcShaderFile, const std::string& teShaderFile, const std::string& gShaderFile, const std::string& name)
 {
     shaders[name] = loadShaderFromFile(vShaderFile, fShaderFile, tcShaderFile, teShaderFile, gShaderFile);
     return shaders[name];
 }
 
-Shader& Assets::getShader(const string& name) {
-	if (shaders.find(name) == end(shaders)) {
-		std::ostringstream loadError;
-		loadError << "Shader " << name << " does not exist in assets manager";
-		Log::error(LogCategory::Application, loadError.str());
-	}
-	return shaders[name];
+Shader& Assets::getShader(const std::string& name)
+{
+    if (shaders.find(name) == end(shaders))
+    {
+        std::ostringstream loadError;
+        loadError << "Shader " << name << " does not exist in assets manager.";
+        Log::error(LogCategory::Application, loadError.str());
+    }
+    return shaders[name];
 }
 
-void Assets::clear()
+void Assets::clear() 
 {
-	for (auto iter : textures) {
-		iter.second.unload();
-	}
-	textures.clear();
-	for (auto iter : shaders) {
-		iter.second.unload();
-	}
-	shaders.clear();
+    // (Properly) delete all textures
+    for (auto iter : textures)
+        iter.second.unload();
+    textures.clear();
+    // (Properly) delete all shaders
+    for (auto iter : shaders)
+        iter.second.unload();
+    shaders.clear();
 }
 
 Texture Assets::loadTextureFromFile(IRenderer& renderer, const string& filename)
 {
-	Texture texture;
-	texture.load(renderer, filename);
-	return texture;
+    Texture texture;
+    // Not very elegant, but simpler architecture
+    if (renderer.type() == IRenderer::Type::SDL)
+    {
+        texture.loadSDL(dynamic_cast<RendererSDL&>(renderer), filename);
+    }
+    else if (renderer.type() == IRenderer::Type::OGL)
+    {
+        texture.loadOGL(dynamic_cast<RendererOGL&>(renderer), filename);
+    }
+    return texture;
 }
 
 Shader Assets::loadShaderFromFile(const std::string& vShaderFile, const std::string& fShaderFile, const std::string& tcShaderFile, const std::string& teShaderFile, const std::string& gShaderFile)

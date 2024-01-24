@@ -1,28 +1,25 @@
 #pragma once
 #include "Component.h"
-#include "Vector2.h"
-#include "Collider.h"
-
 class MoveComponent : public Component
 {
 public:
-	MoveComponent(Actor* ownerP, Collider* coll = nullptr ,int updateOrder = 10 );
+	MoveComponent(Actor* ownerP, int updateOrder = 10); // By default, update before other components
 	MoveComponent() = delete;
 	MoveComponent(const MoveComponent&) = delete;
-	MoveComponent& operator =(const MoveComponent&) = delete;
+	MoveComponent& operator=(const MoveComponent&) = delete;
 
-	Vector2 getVelocity() const { return velocity; }
+	float getForwardSpeed() const { return forwardSpeed; }
 	float getAngularSpeed() const { return angularSpeed; }
 
-	void setVelocity(Vector2 velocityP);
+	void setForwardSpeed(float forwardSpeedP);
 	void setAngularSpeed(float angularSpeedP);
 
 	void update(float dt) override;
 
+
 private:
-	Vector2 velocity;
+	float forwardSpeed;
 	float angularSpeed;
 
-	Collider* collider;
 };
 

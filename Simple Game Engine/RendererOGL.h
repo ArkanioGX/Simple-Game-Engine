@@ -2,6 +2,7 @@
 #include "IRenderer.h"
 #include "VertexArray.h"
 #include "Vector2.h"
+#include "Shader.h"
 
 #include <vector>
 
@@ -23,14 +24,15 @@ public:
 	void drawSprite(const Actor& actor, const class Texture& tex, Rectangle srcRect, Vector2 origin, Flip flip) const;
 
 	void close();
-	IRenderer::Type type() {return IRenderer::Type::OGL; }
+	IRenderer::Type type() { return Type::OGL; }
 
 private:
 	void drawSprites();
 
 	Window* window;
-	VertexArray* vertexArray;
 	SDL_GLContext context;
+	VertexArray* vertexArray;
+	Shader* shader;
 	std::vector<class SpriteComponent*> sprites;
+	Matrix4 viewProj;
 };
-

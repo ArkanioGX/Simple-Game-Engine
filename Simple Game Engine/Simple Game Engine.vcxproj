@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)\Externals\glew-2.1.0\include;$(ProjectDir)\Externals\SDL2_image-2.0.5\include;$(ProjectDir)\Externals\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)Externals\glew-2.1.0\include;$(ProjectDir)\Externals\SDL2_image-2.0.5\include;$(ProjectDir)\Externals\SDL2-2.0.12\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)Externals\glew-2.1.0\lib\Release\x64;$(ProjectDir)Externals\SDL2-2.0.12\lib\x64;$(ProjectDir)\Externals\SDL2_image-2.0.5\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -113,7 +113,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2Main.lib;SDL2_image.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2Main.lib;SDL2_image.lib;glew32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <ProjectReference>
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
@@ -142,77 +142,68 @@
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="AnimSpriteComponent.cpp" />
     <ClCompile Include="Assets.cpp" />
+    <ClCompile Include="Astroid.cpp" />
     <ClCompile Include="BackgroundSpriteComponent.cpp" />
-    <ClCompile Include="Collider.cpp" />
-    <ClCompile Include="Collision.cpp" />
+    <ClCompile Include="CircleCollisionComponent.cpp" />
     <ClCompile Include="Component.cpp" />
-    <ClCompile Include="Door.cpp" />
-    <ClCompile Include="DoorController.cpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Ground.cpp" />
     <ClCompile Include="InputComponent.cpp" />
-    <ClCompile Include="Key.cpp" />
-    <ClCompile Include="KeyController.cpp" />
+    <ClCompile Include="Laser.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrix4.cpp" />
     <ClCompile Include="MoveComponent.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayerPickup.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="RendererOGL.cpp" />
     <ClCompile Include="RendererSDL.cpp" />
-    <ClCompile Include="SceneLoader.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Ship.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Tile.cpp" />
-    <ClCompile Include="TileComponent.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Vector2.cpp" />
+    <ClCompile Include="Vector3.cpp" />
     <ClCompile Include="VertexArray.cpp" />
-    <ClCompile Include="Wall.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
     <ClInclude Include="AnimSpriteComponent.h" />
     <ClInclude Include="Assets.h" />
+    <ClInclude Include="Astroid.h" />
     <ClInclude Include="BackgroundSpriteComponent.h" />
-    <ClInclude Include="Collider.h" />
-    <ClInclude Include="Collision.h" />
+    <ClInclude Include="CircleCollisionComponent.h" />
     <ClInclude Include="Component.h" />
-    <ClInclude Include="Door.h" />
-    <ClInclude Include="DoorController.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Ground.h" />
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="IRenderer.h" />
-    <ClInclude Include="Key.h" />
-    <ClInclude Include="KeyController.h" />
+    <ClInclude Include="Laser.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Maths.h" />
+    <ClInclude Include="Matrix4.h" />
     <ClInclude Include="MoveComponent.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerPickup.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="RendererOGL.h" />
     <ClInclude Include="RendererSDL.h" />
-    <ClInclude Include="SceneLoader.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="Ship.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Tile.h" />
-    <ClInclude Include="TileComponent.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Vector2.h" />
+    <ClInclude Include="Vector3.h" />
     <ClInclude Include="VertexArray.h" />
-    <ClInclude Include="Wall.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="fBasic.shader" />
+    <None Include="fSprite.shader" />
     <None Include="vBasic.shader" />
+    <None Include="vSprite.shader" />
+    <None Include="vTransform.shader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

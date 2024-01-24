@@ -71,7 +71,7 @@ void RendererSDL::drawSprite(const Actor& actor, const Texture& tex, Rectangle s
 	SDL_Rect* srcSDL = nullptr;
 	if (srcRect != Rectangle::nullRect)
 	{
-		srcSDL = new SDL_Rect{
+		srcSDL = new SDL_Rect {
 			Maths::round(srcRect.x),
 			Maths::round(srcRect.y),
 			Maths::round(srcRect.width),

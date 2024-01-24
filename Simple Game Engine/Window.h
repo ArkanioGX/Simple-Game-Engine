@@ -9,15 +9,18 @@ class Window
 public:
 	Window();
 	Window(const Window&) = delete;
-	Window& operator =(const Window&) = delete;
+	Window& operator=(const Window&) = delete;
 
 	bool initialize();
 	void close();
-	SDL_Window* getSDLWindow() const { return RenderWindow; }
+
+	SDL_Window* getSDLWindow() const { return SDLWindow; }
 	int getWidth() const { return width; }
 	int getHeight() const { return height; }
+
 private:
-	SDL_Window* RenderWindow;
+	SDL_Window* SDLWindow;
 	int width;
 	int height;
 };
+

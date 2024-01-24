@@ -2,11 +2,10 @@
 #include "Component.h"
 #include "Texture.h"
 
-
-class SpriteComponent : public Component
+class SpriteComponent :	public Component
 {
 public:
-	SpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP = 100, Rectangle rP = Rectangle::nullRect);
+	SpriteComponent(Actor* ownerP, Texture& textureP, int drawOrderP = 100); // Lower draw order: further back
 	virtual ~SpriteComponent();
 	SpriteComponent() = delete;
 	SpriteComponent(const SpriteComponent&) = delete;
@@ -17,13 +16,12 @@ public:
 
 	int getDrawOrder() const { return drawOrder; }
 	int getTexWidth() const { return texWidth; }
-	int getTxHeight() const { return texHeight; }
+	int getTexHeight() const { return texHeight; }
 
 protected:
 	Texture texture;
 	int drawOrder;
 	int texWidth;
 	int texHeight;
-	Rectangle rect;
 };
 
