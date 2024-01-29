@@ -57,7 +57,6 @@ void Game::load()
 	Ship* ship = new Ship();
 	ship->setPosition(Vector2{ 100, 300 });
 
-	/*
 	// Background
 	// Create the "far back" background
 	vector<Texture*> bgTexsFar {
@@ -75,7 +74,7 @@ void Game::load()
 		&Assets::getTexture("Stars")
 	};
 	BackgroundSpriteComponent* bgSpritesClose = new BackgroundSpriteComponent(bgClose, bgTexsClose, 50);
-	bgSpritesClose->setScrollSpeed(-200.0f);*/
+	bgSpritesClose->setScrollSpeed(-200.0f);
 	
 	const int astroidNumber = 20;
 	for (int i = 0; i < astroidNumber; ++i)
