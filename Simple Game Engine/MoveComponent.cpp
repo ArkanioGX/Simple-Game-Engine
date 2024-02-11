@@ -3,7 +3,6 @@
 #include "Actor.h"
 #include "Window.h"
 #include "Log.h"
-#include "Player.h"
 #include "Game.h"
 
 MoveComponent::MoveComponent(Actor* ownerP, Collider* coll, int updateOrderP) : 

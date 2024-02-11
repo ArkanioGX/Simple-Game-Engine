@@ -7,7 +7,6 @@
 #include "Actor.h"
 #include "Assets.h"
 #include "Log.h"
-#include "Player.h"
 #include "SpriteComponent.h"
 
 
@@ -39,7 +38,7 @@ public:
 	void unload();
 	void close();
 
-	Player* getPlayer() { return player; };
+	Actor* getPlayer() { return player; };
 
 	void addActor(Actor* actor);
 	void removeActor(Actor* actor);
@@ -55,7 +54,7 @@ private:
 	bool isRunning;
 	Renderer renderer;
 
-	Player* player;
+	Actor* player;
 
 	bool isUpdatingActors;
 	vector<Actor*> actors;

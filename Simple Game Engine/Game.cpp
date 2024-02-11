@@ -1,14 +1,10 @@
 #include "Game.h"
 #include "Actor.h"
 #include "SpriteComponent.h"
-#include "TileComponent.h"
 #include "AnimSpriteComponent.h"
 #include "Timer.h"
 #include "Assets.h"
-#include "Wall.h"
-#include "SceneLoader.h"
 #include "BackgroundSpriteComponent.h"
-#include "Player.h"
 #include <iostream>
 #include <algorithm>
 
@@ -120,95 +116,6 @@ void Game::removeActor(Actor* actor) {
 
 void Game::load() {
 	Assets::loadTexture(renderer,"Res/Ship01.png","Ship");
-	Assets::loadTexture(renderer, "Res/Ship02.png", "ship02");
-	Assets::loadTexture(renderer, "Res/Ship03.png", "ship03");
-	Assets::loadTexture(renderer, "Res/Ship04.png", "ship04");
-	Assets::loadTexture(renderer, "Res/Farback01.png", "farback01");
-	Assets::loadTexture(renderer, "Res/Farback02.png", "farback02");
-	Assets::loadTexture(renderer, "Res/Stars.png", "Stars");
-	Assets::loadTexture(renderer, "Res/Hero.png", "Player");
-	Assets::loadTexture(renderer, "Res/Anim_Key_Sheet.png", "Key");
-	Assets::loadTexture(renderer, "Res/TS_Dungeon1.png", "Tileset");
-	
-	
-
-	Actor* Scene = new Actor();
-	SceneLoader* sl = new SceneLoader(Scene);
-
-	player = new Player();
-	player->setPosition({ 128,600 });
-
-	/*float scale = 2;
-	for (int x = 0; x < 16; x++)
-	{
-		for (int y = 0; y < 12; y++)
-		{
-			Actor* wallAct = new Actor();
-			int TileID = 1;
-			if (x == 0 || x == 15 || y == 0 || y == 11) {
-				Wall* w = new Wall({ float(x),float(y) }, 2);
-			}
-			TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), TileID);
-			wallAct->setScale(scale);
-			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });
-		}
-	}*/
-
-	player->getCollider()->checkCollision();
-	player->setScale(4);
-
-	
-
-	/*float scale = 2;
-	for (int x = 6; x < 8; x++)
-	{
-		for (int y = 4; y < 12; y++)
-		{
-			Actor* wallAct = new Actor();
-			TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), 0);
-			wallAct->setScale(scale);
-			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });
-		}
-	}
-
-	for (int x = 9; x < 11; x++)
-	{
-		for (int y = 4; y < 12; y++)
-		{
-			Actor* wallAct = new Actor();
-			TileComponent* wall = new TileComponent(wallAct, Assets::getTexture("Tileset"), 0);
-			wallAct->setScale(scale);
-			wallAct->setPosition({ 16 + x * 32 * scale,16 + y * 32 * scale });
-		}
-	}*/
-
-	/*vector<Texture*> animTextures{
-		&Assets::getTexture("ship01"),
-		&Assets::getTexture("ship02"),
-		&Assets::getTexture("ship03"),
-		&Assets::getTexture("ship04")
-	};
-	Actor* ship = new Actor();
-	AnimSpriteComponent* animatedSprite = new AnimSpriteComponent(ship, animTextures,200, Rectangle::nullRect);
-	ship->setPosition(Vector2{ 100,300 });*/
-
-	/*vector<Texture*> bgTexsFar{
-		&Assets::getTexture("farback01"),
-		&Assets::getTexture("farback02")
-	};
-	Actor* bgFar = new Actor();
-	BackgroundSpriteComponent* bgSpriteFar = new BackgroundSpriteComponent(bgFar, bgTexsFar);
-	bgSpriteFar->setScrollSpeed(-100.0f);
-
-	vector<Texture*> bgTexsClose{
-		&Assets::getTexture("Stars"),
-		&Assets::getTexture("Stars")
-	};
-	Actor* bgClose = new Actor();
-	BackgroundSpriteComponent* bgSpriteClose = new BackgroundSpriteComponent(bgClose, bgTexsClose,150, Rectangle::nullRect);
-	bgSpriteClose->setScrollSpeed(-200.0f);*/
-
-
 }
 
 void Game::unload() {
