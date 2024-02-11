@@ -39,3 +39,9 @@ x64/Debug/Simple Game Engine.pdb
 *.ipch
 *.ipch
 *.ipch
+*.tlog
+*.recipe
+*.lastbuildstate
+*.recipe
+*.iobj
+*.ipdb
