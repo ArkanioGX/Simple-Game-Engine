@@ -1,0 +1,32 @@
+﻿C:\VisualStudio\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (SimpleEngineWithOpenGL-023.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Game.cpp
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Component.h(5,17): warning C4099: 'InputState': type name first seen using 'struct' now seen using 'class'
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Actor.h(40,33): message : see declaration of 'InputState'
+  InputComponent.cpp
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\InputSystem.h(12,1): warning C4099: 'InputState': type name first seen using 'class' now seen using 'struct'
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\InputSystem.h(11,8): message : see declaration of 'InputState'
+  SpriteComponent.cpp
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Actor.h(40,43): warning C4099: 'InputState': type name first seen using 'class' now seen using 'struct'
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Component.h(5,7): message : see declaration of 'InputState'
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Actor.h(41,49): warning C4099: 'InputState': type name first seen using 'class' now seen using 'struct'
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Component.h(5,7): message : see declaration of 'InputState'
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\InputSystem.h(12,1): warning C4099: 'InputState': type name first seen using 'class' now seen using 'struct'
+C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\InputSystem.h(11,8): message : see declaration of 'InputState'
+  Generating Code...
+  SimpleEngineWithOpenGL-023.vcxproj -> C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\x64\Debug\ProjectPart2Finished.exe
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Meshes\Cube.gpmesh
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Meshes\Plane.gpmesh
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Meshes\Sphere.gpmesh
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Shaders\BasicMesh.frag
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Shaders\BasicMesh.vert
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Shaders\Phong.frag
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Shaders\Phong.vert
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Shaders\Sprite.frag
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Shaders\Sprite.vert
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Textures\Cube.png
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Textures\Default.png
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Textures\HealthBar.png
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Textures\Plane.png
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Textures\Radar.png
+  C:\Users\mollet.clarence\Documents\GitHub\Simple-Game-Engine\SimpleEngineWithOpenGL-023\Res\Textures\Sphere.png
+  15 File(s) copied
