@@ -7,6 +7,7 @@
 #include "Sphere.h"
 #include "Plane.h"
 #include "FPSActor.h"
+#include "FollowActor.h"
 
 bool Game::initialize()
 {
@@ -38,8 +39,13 @@ void Game::load()
 	Assets::loadMesh("Res\\Meshes\\Plane.gpmesh", "Mesh_Plane");
 	Assets::loadMesh("Res\\Meshes\\Sphere.gpmesh", "Mesh_Sphere");
 	Assets::loadMesh("Res\\Meshes\\Rifle.gpmesh", "Mesh_Rifle");
+	Assets::loadMesh("Res\\Meshes\\RacingCar.gpmesh", "Mesh_RacingCar");
 
 	fps = new FPSActor();
+
+	follow = new FollowActor();
+
+	
 
 	Cube* a = new Cube();
 	a->setPosition(Vector3(200.0f, 105.0f, 0.0f));
@@ -104,6 +110,8 @@ void Game::load()
 	crosshairActor->setScale(2.0f);
 	crosshair = new SpriteComponent(crosshairActor, Assets::getTexture("Crosshair"));
 
+	changeCamera(2);
+
 	/*
 	ui = new Actor();
 	ui->setPosition(Vector3(375.0f, -275.0f, 0.0f));
@@ -128,6 +136,14 @@ void Game::processInput()
 	{
 		isRunning = false;
 	}
+
+	if (input.keyboard.getKeyState(SDL_SCANCODE_1) == ButtonState::Pressed) {
+		changeCamera(1);
+	}
+	else if (input.keyboard.getKeyState(SDL_SCANCODE_2) == ButtonState::Pressed) {
+		changeCamera(2);
+	}
+
 	// Actor input
 	isUpdatingActors = true;
 	for (auto actor : actors)
@@ -175,6 +191,28 @@ void Game::render()
 	renderer.beginDraw();
 	renderer.draw();
 	renderer.endDraw();
+}
+
+void Game::changeCamera(int mode)
+{
+	fps->setState(Actor::ActorState::Paused);
+	fps->setVisible(false);
+	crosshair->setVisible(false);
+	follow->setState(Actor::ActorState::Paused);
+	follow->setVisible(false);
+
+	switch (mode) {
+	case 1:
+	default:
+		fps->setState(Actor::ActorState::Active);
+		fps->setVisible(true);
+		crosshair->setVisible(true);
+		break;
+	case 2:
+		follow->setState(Actor::ActorState::Active);
+		follow->setVisible(true);
+		break;
+	}
 }
 
 void Game::loop()

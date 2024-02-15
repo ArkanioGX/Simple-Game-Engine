@@ -86,9 +86,15 @@
     <ClCompile Include="CameraComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
-    <ClCompile Include="FPSActor.cpp" />
     <ClCompile Include="FPSCameraComponent.cpp">
       <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FPSActor.cpp">
+      <Filter>GameSpecific</Filter>
+    </ClCompile>
+    <ClCompile Include="FollowCameraComponent.cpp" />
+    <ClCompile Include="FollowActor.cpp">
+      <Filter>GameSpecific</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -185,9 +191,15 @@
     <ClInclude Include="CameraComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="FPSActor.h" />
     <ClInclude Include="FPSCameraComponent.h">
       <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FPSActor.h">
+      <Filter>GameSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="FollowCameraComponent.h" />
+    <ClInclude Include="FollowActor.h">
+      <Filter>GameSpecific</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

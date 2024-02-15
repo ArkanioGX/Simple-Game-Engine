@@ -1,41 +1,20 @@
 
-.vs/Simple Game Engine/v17/ipch/AutoPCH/a5d55e14ae2074f6/MAIN.ipch
 .vs/Simple Game Engine/v17/Browse.VC.opendb
 .vs/Simple Game Engine/v17/Browse.VC.db-wal
 .vs/Simple Game Engine/v17/Browse.VC.db-shm
 .vs/Simple Game Engine/v17/Browse.VC.db
 .vs/Simple Game Engine/v17/.suo
 .vs/Simple Game Engine/FileContentIndex/read.lock
-.vs/Simple Game Engine/FileContentIndex/8008b19e-62d3-4510-80b2-e96f9de48732.vsidx
-.vs/Simple Game Engine/FileContentIndex/2869874a-14f0-4e5c-8811-236e70bbca57.vsidx
-Simple Game Engine/x64/Debug/main.obj
-Simple Game Engine/x64/Debug/Simple G.572c9a34.tlog/CL.command.1.tlog
-Simple Game Engine/x64/Debug/Simple G.572c9a34.tlog/Cl.items.tlog
-Simple Game Engine/x64/Debug/Simple G.572c9a34.tlog/CL.read.1.tlog
-Simple Game Engine/x64/Debug/Simple G.572c9a34.tlog/CL.write.1.tlog
-Simple Game Engine/x64/Debug/Simple G.572c9a34.tlog/link.command.1.tlog
-Simple Game Engine/x64/Debug/Simple G.572c9a34.tlog/link.read.1.tlog
-Simple Game Engine/x64/Debug/Simple G.572c9a34.tlog/link.write.1.tlog
-Simple Game Engine/x64/Debug/Simple G.572c9a34.tlog/Simple Game Engine.lastbuildstate
-Simple Game Engine/x64/Debug/Simple Game Engine.exe.recipe
-Simple Game Engine/x64/Debug/Simple Game Engine.ilk
-Simple Game Engine/x64/Debug/Simple Game Engine.log
-Simple Game Engine/x64/Debug/vc143.idb
-Simple Game Engine/x64/Debug/vc143.pdb
 x64/Debug/Simple Game Engine.exe
 x64/Debug/Simple Game Engine.pdb
-.vs/Simple Game Engine/FileContentIndex/117a2204-82e4-4ed0-8905-7fa2b9f55be5.vsidx
-.vs/Simple Game Engine/FileContentIndex/3e34ba88-51b2-4fe8-9f04-7c5eb9dbcb05.vsidx
-.vs/Simple Game Engine/FileContentIndex/5a45f278-0235-4f9a-988a-17edc89adbf4.vsidx
-.vs/Simple Game Engine/FileContentIndex/9ed762a7-6c83-4abd-8fed-8830057aae17.vsidx
-.vs/Simple Game Engine/FileContentIndex/a6b3655c-2429-40d8-9db3-fc64aa5fbd6f.vsidx
-.vs/Simple Game Engine/FileContentIndex/e8dc46a5-5b38-4e04-a58e-e8b72e81e09d.vsidx
-.vs/Simple Game Engine/v17/ipch/AutoPCH/5f461fa2a121f3a5/GAME.ipch
-.vs/Simple Game Engine/v17/ipch/AutoPCH/670e88662bfa162/ACTOR.ipch
-.vs/Simple Game Engine/v17/ipch/AutoPCH/99db6d4b60e72e3f/WINDOW.ipch
-.vs/Simple Game Engine/v17/ipch/AutoPCH/e9253ccb28a8f810/RENDERER.ipch
+*.vsidx
 *.obj
 *.vsidx
 *.ipch
-*.ipch
-*.ipch
+*.tlog
+*.pdb
+*.exe
+*.log
+*.ilk
+*.recipe
+*.lastbuildstate
