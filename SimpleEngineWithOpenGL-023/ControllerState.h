@@ -9,6 +9,8 @@ class ControllerState
 public:
 	friend class InputSystem;
 
+	ControllerState();
+
 	bool getButtonValue(SDL_GameControllerButton button) const;
 	enum class ButtonState getButtonState(SDL_GameControllerButton button) const;
 

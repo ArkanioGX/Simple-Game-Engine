@@ -40,3 +40,8 @@ void MeshComponent::setTextureIndex(size_t textureIndexP)
 {
 	textureIndex = textureIndexP;
 }
+
+void MeshComponent::setVisible(bool isVisibleP)
+{
+	isVisible = isVisibleP;
+}

@@ -83,6 +83,13 @@
     <ClCompile Include="InputSystem.cpp" />
     <ClCompile Include="MouseState.cpp" />
     <ClCompile Include="ControllerState.cpp" />
+    <ClCompile Include="CameraComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FPSActor.cpp" />
+    <ClCompile Include="FPSCameraComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -175,6 +182,13 @@
     <ClInclude Include="KeyboardState.h" />
     <ClInclude Include="MouseState.h" />
     <ClInclude Include="ControllerState.h" />
+    <ClInclude Include="CameraComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FPSActor.h" />
+    <ClInclude Include="FPSCameraComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">
