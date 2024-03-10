@@ -9,6 +9,8 @@
 #include "Vector2.h"
 #include "RendererOGL.h"
 #include "Camera.h"
+#include "PhysicsSystem.h"
+#include "PlaneActor.h"
 
 using std::vector;
 
@@ -46,6 +48,12 @@ public:
 	void addActor(Actor* actor);
 	void removeActor(Actor* actor);
 	RendererOGL& getRenderer() { return renderer; }
+	PhysicsSystem& getPhysicsSystem() { return physicsSystem; }
+
+	// Game-specific
+	void addPlane(class PlaneActor* plane);
+	void removePlane(class PlaneActor* plane);
+	vector<PlaneActor*>& getPlanes() { return planes; }
 
 private:
 	void processInput();
@@ -58,6 +66,7 @@ private:
 	Window window;
 	RendererOGL renderer;
 	InputSystem inputSystem;
+	PhysicsSystem physicsSystem;
 
 	bool isUpdatingActors;
 	vector<Actor*> actors;
@@ -69,5 +78,7 @@ private:
 	class FollowActor* follow;
 	class OrbitActor* orbit;
 	class SplineActor* path;
+
+	vector<PlaneActor*> planes;
 };
 

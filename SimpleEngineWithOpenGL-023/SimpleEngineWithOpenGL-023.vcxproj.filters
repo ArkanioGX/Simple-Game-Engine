@@ -109,6 +109,23 @@
     </ClCompile>
     <ClCompile Include="SplineCameraComponent.cpp" />
     <ClCompile Include="SplineActor.cpp" />
+    <ClCompile Include="CubeActor.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaneActor.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereActor.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="LineSegment.cpp" />
+    <ClCompile Include="AABB.cpp" />
+    <ClCompile Include="Collisions.cpp" />
+    <ClCompile Include="BoxComponent.cpp" />
+    <ClCompile Include="PhysicsSystem.cpp" />
+    <ClCompile Include="BallActor.cpp" />
+    <ClCompile Include="BallMoveComponent.cpp" />
+    <ClCompile Include="TargetActor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -227,6 +244,23 @@
     </ClInclude>
     <ClInclude Include="SplineCameraComponent.h" />
     <ClInclude Include="SplineActor.h" />
+    <ClInclude Include="CubeActor.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaneActor.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereActor.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="LineSegment.h" />
+    <ClInclude Include="AABB.h" />
+    <ClInclude Include="Collisions.h" />
+    <ClInclude Include="BoxComponent.h" />
+    <ClInclude Include="PhysicsSystem.h" />
+    <ClInclude Include="BallActor.h" />
+    <ClInclude Include="BallMoveComponent.h" />
+    <ClInclude Include="TargetActor.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">

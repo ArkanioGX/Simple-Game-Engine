@@ -19,6 +19,8 @@ public:
 	virtual void update(float dt);
 	virtual void onUpdateWorldTransform() {}
 
+	Actor& getOwner() const { return owner; }
+
 protected:
 	Actor& owner;
 	int updateOrder;		// Order of the component in the actor's updateComponent method

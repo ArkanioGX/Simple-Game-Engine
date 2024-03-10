@@ -29,6 +29,7 @@ public:
 	const Quaternion getRotation() const { return rotation; }
 	const Matrix4& getWorldTransform() const { return worldTransform;  }
 
+
 	void setPosition(Vector3 positionP);
 	void setScale(float scaleP);
 	void setRotation(Quaternion rotationP);
@@ -37,6 +38,7 @@ public:
 	Vector3 getForward() const;
 	Vector3 getRight() const;
 	void computeWorldTransform();
+	void rotateToNewForward(const Vector3& newForward);
 
 	void processInput(const struct InputState& inputState);
 	virtual void actorInput(const struct InputState& inputState);
