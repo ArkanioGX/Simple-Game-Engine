@@ -157,6 +157,7 @@
     <ClCompile Include="TargetActor.cpp">
       <Filter>Prefabs</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerPlaneActor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -323,6 +324,7 @@
     <ClInclude Include="TargetActor.h">
       <Filter>Prefabs</Filter>
     </ClInclude>
+    <ClInclude Include="PlayerPlaneActor.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">

@@ -12,6 +12,7 @@
 #include "OrbitActor.h"
 #include "SplineActor.h"
 #include "TargetActor.h"
+#include "PlayerPlaneActor.h"
 #include <algorithm>
 #include <algorithm>
 
@@ -50,8 +51,13 @@ void Game::load()
 	Assets::loadMesh("Res\\Meshes\\Rifle.gpmesh", "Mesh_Rifle");
 	Assets::loadMesh("Res\\Meshes\\RacingCar.gpmesh", "Mesh_RacingCar");
 	Assets::loadMesh("Res\\Meshes\\Target.gpmesh", "Mesh_Target");
+	Assets::loadMesh("Res\\Meshes\\Cube.gpmesh", "Mesh_AirPlane");
 
 	fps = new FPSActor();
+
+	PlayerPlaneActor* player = new PlayerPlaneActor();
+	player->setPosition(Vector3(200.0f, -75.0f, 0.0f));
+	player->setScale(150.0f);
 
 	CubeActor* a = new CubeActor();
 	a->setPosition(Vector3(200.0f, 105.0f, 0.0f));
@@ -78,6 +84,7 @@ void Game::load()
 		}
 	}
 
+	/*
 	// Left/right walls
 	q = Quaternion(Vector3::unitX, Maths::piOver2);
 	for (int i = 0; i < 10; i++)
@@ -102,7 +109,7 @@ void Game::load()
 		p = new PlaneActor();
 		p->setPosition(Vector3(-start + size, start + i * size, 0.0f));
 		p->setRotation(q);
-	}
+	}*/
 
 	// Setup lights
 	renderer.setAmbientLight(Vector3(0.2f, 0.2f, 0.2f));
