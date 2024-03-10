@@ -22,6 +22,8 @@ D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Mesh.cpp;D:\Pr
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\MeshComponent.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\MeshComponent.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\MouseState.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\MouseState.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\MoveComponent.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\MoveComponent.obj
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\OrbitActor.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\OrbitActor.obj
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\OrbitCameraComponent.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\OrbitCameraComponent.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Plane.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Plane.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Quaternion.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Quaternion.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Random.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Random.obj

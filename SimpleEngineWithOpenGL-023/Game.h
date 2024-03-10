@@ -31,7 +31,8 @@ private:
 		isUpdatingActors(false),
 		fps(nullptr), 
 		crosshair(nullptr),
-		follow(nullptr) 
+		follow(nullptr),
+		orbit(nullptr)
 	{}
 
 public:
@@ -65,5 +66,6 @@ private:
 	class FPSActor* fps;
 	class SpriteComponent* crosshair;
 	class FollowActor* follow;
+	class OrbitActor* orbit;
 };
 

@@ -96,6 +96,8 @@
     <ClCompile Include="FollowActor.cpp">
       <Filter>GameSpecific</Filter>
     </ClCompile>
+    <ClCompile Include="OrbitCameraComponent.cpp" />
+    <ClCompile Include="OrbitActor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -201,6 +203,8 @@
     <ClInclude Include="FollowActor.h">
       <Filter>GameSpecific</Filter>
     </ClInclude>
+    <ClInclude Include="OrbitCameraComponent.h" />
+    <ClInclude Include="OrbitActor.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">

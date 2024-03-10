@@ -8,6 +8,7 @@
 #include "Plane.h"
 #include "FPSActor.h"
 #include "FollowActor.h"
+#include "OrbitActor.h"
 
 bool Game::initialize()
 {
@@ -45,6 +46,7 @@ void Game::load()
 
 	follow = new FollowActor();
 
+	orbit = new OrbitActor();
 	
 
 	Cube* a = new Cube();
@@ -110,7 +112,7 @@ void Game::load()
 	crosshairActor->setScale(2.0f);
 	crosshair = new SpriteComponent(crosshairActor, Assets::getTexture("Crosshair"));
 
-	changeCamera(2);
+	changeCamera(3);
 
 	/*
 	ui = new Actor();
@@ -142,6 +144,9 @@ void Game::processInput()
 	}
 	else if (input.keyboard.getKeyState(SDL_SCANCODE_2) == ButtonState::Pressed) {
 		changeCamera(2);
+	}
+	else if (input.keyboard.getKeyState(SDL_SCANCODE_3) == ButtonState::Pressed) {
+		changeCamera(3);
 	}
 
 	// Actor input
@@ -200,6 +205,8 @@ void Game::changeCamera(int mode)
 	crosshair->setVisible(false);
 	follow->setState(Actor::ActorState::Paused);
 	follow->setVisible(false);
+	orbit->setState(Actor::ActorState::Paused);
+	orbit->setVisible(false);
 
 	switch (mode) {
 	case 1:
@@ -211,6 +218,10 @@ void Game::changeCamera(int mode)
 	case 2:
 		follow->setState(Actor::ActorState::Active);
 		follow->setVisible(true);
+		break;
+	case 3:
+		orbit->setState(Actor::ActorState::Active);
+		orbit->setVisible(true);
 		break;
 	}
 }
