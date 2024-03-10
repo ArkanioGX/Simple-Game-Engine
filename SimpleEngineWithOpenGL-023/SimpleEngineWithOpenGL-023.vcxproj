@@ -179,6 +179,9 @@
     <ClCompile Include="Assets.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="Spline.cpp" />
+    <ClCompile Include="SplineActor.cpp" />
+    <ClCompile Include="SplineCameraComponent.cpp" />
     <ClCompile Include="SpriteComponent.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Timer.cpp" />
@@ -224,6 +227,9 @@
     <ClInclude Include="Assets.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Sphere.h" />
+    <ClInclude Include="Spline.h" />
+    <ClInclude Include="SplineActor.h" />
+    <ClInclude Include="SplineCameraComponent.h" />
     <ClInclude Include="SpriteComponent.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Timer.h" />

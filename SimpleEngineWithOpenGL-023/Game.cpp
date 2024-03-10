@@ -9,6 +9,7 @@
 #include "FPSActor.h"
 #include "FollowActor.h"
 #include "OrbitActor.h"
+#include "SplineActor.h"
 
 bool Game::initialize()
 {
@@ -47,6 +48,8 @@ void Game::load()
 	follow = new FollowActor();
 
 	orbit = new OrbitActor();
+
+	path = new SplineActor();
 	
 
 	Cube* a = new Cube();
@@ -148,6 +151,9 @@ void Game::processInput()
 	else if (input.keyboard.getKeyState(SDL_SCANCODE_3) == ButtonState::Pressed) {
 		changeCamera(3);
 	}
+	else if (input.keyboard.getKeyState(SDL_SCANCODE_4) == ButtonState::Pressed) {
+		changeCamera(4);
+	}
 
 	// Actor input
 	isUpdatingActors = true;
@@ -207,6 +213,7 @@ void Game::changeCamera(int mode)
 	follow->setVisible(false);
 	orbit->setState(Actor::ActorState::Paused);
 	orbit->setVisible(false);
+	path->setState(Actor::ActorState::Paused);
 
 	switch (mode) {
 	case 1:
@@ -222,6 +229,10 @@ void Game::changeCamera(int mode)
 	case 3:
 		orbit->setState(Actor::ActorState::Active);
 		orbit->setVisible(true);
+		break;
+	case 4:
+		path->setState(Actor::ActorState::Active);
+		path->restartSpline();
 		break;
 	}
 }

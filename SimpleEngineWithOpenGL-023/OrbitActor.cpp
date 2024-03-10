@@ -31,7 +31,7 @@ void OrbitActor::actorInput(const InputState& inputState)
 		cameraComponent->setYawSpeed(yawSpeed);
 
 		float pitchSpeed = 0.0f;
-		if (Maths::nearZero(y)) {
+		if (!Maths::nearZero(y)) {
 			pitchSpeed = y / maxMouseSpeed;
 			pitchSpeed *= maxOrbitSpeed;
 		}

@@ -32,6 +32,9 @@ D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\RendererOGL.cp
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Assets.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Assets.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Shader.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Shader.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Sphere.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Sphere.obj
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Spline.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Spline.obj
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\SplineActor.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\SplineActor.obj
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\SplineCameraComponent.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\SplineCameraComponent.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\SpriteComponent.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\SpriteComponent.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Texture.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Texture.obj
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Timer.cpp;D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\x64\Debug\Timer.obj

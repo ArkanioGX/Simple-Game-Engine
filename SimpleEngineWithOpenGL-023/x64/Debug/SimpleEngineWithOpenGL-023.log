@@ -1,7 +1,51 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (SimpleEngineWithOpenGL-023.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
+  Actor.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,17): warning C4099: 'InputState' : nom de type déjà rencontré avec 'struct' et utilisant maintenant 'class'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,33): message : voir la déclaration de 'InputState'
+  Camera.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,17): warning C4099: 'InputState' : nom de type déjà rencontré avec 'struct' et utilisant maintenant 'class'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,33): message : voir la déclaration de 'InputState'
+  CameraComponent.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,43): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,7): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(42,49): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,7): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\InputSystem.h(15,1): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\InputSystem.h(14,8): message : voir la déclaration de 'InputState'
+  FPSActor.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,17): warning C4099: 'InputState' : nom de type déjà rencontré avec 'struct' et utilisant maintenant 'class'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,33): message : voir la déclaration de 'InputState'
   Game.cpp
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,17): warning C4099: 'InputState' : nom de type déjà rencontré avec 'struct' et utilisant maintenant 'class'
 D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,33): message : voir la déclaration de 'InputState'
+  Main.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,17): warning C4099: 'InputState' : nom de type déjà rencontré avec 'struct' et utilisant maintenant 'class'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,33): message : voir la déclaration de 'InputState'
+  MeshComponent.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,43): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,7): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(42,49): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,7): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\InputSystem.h(15,1): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\InputSystem.h(14,8): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\MeshComponent.cpp(23,33): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
+  SplineActor.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,17): warning C4099: 'InputState' : nom de type déjà rencontré avec 'struct' et utilisant maintenant 'class'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,33): message : voir la déclaration de 'InputState'
+  SplineCameraComponent.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,43): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,7): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(42,49): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,7): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\SplineCameraComponent.cpp(30,43): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+  SpriteComponent.cpp
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(41,43): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,7): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Actor.h(42,49): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Component.h(5,7): message : voir la déclaration de 'InputState'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\InputSystem.h(15,1): warning C4099: 'InputState' : nom de type déjà rencontré avec 'class' et utilisant maintenant 'struct'
+D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\InputSystem.h(14,8): message : voir la déclaration de 'InputState'
+  Génération de code en cours...
   SimpleEngineWithOpenGL-023.vcxproj -> D:\Projects\ArtFX\Simple-Game-Engine_2\x64\Debug\ProjectPart2Finished.exe
   D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Res\Meshes\Cube.gpmesh
   D:\Projects\ArtFX\Simple-Game-Engine_2\SimpleEngineWithOpenGL-023\Res\Meshes\Plane.gpmesh

@@ -92,12 +92,23 @@
     <ClCompile Include="FPSActor.cpp">
       <Filter>GameSpecific</Filter>
     </ClCompile>
-    <ClCompile Include="FollowCameraComponent.cpp" />
     <ClCompile Include="FollowActor.cpp">
       <Filter>GameSpecific</Filter>
     </ClCompile>
-    <ClCompile Include="OrbitCameraComponent.cpp" />
-    <ClCompile Include="OrbitActor.cpp" />
+    <ClCompile Include="Spline.cpp">
+      <Filter>Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="FollowCameraComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="OrbitCameraComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="OrbitActor.cpp">
+      <Filter>GameSpecific</Filter>
+    </ClCompile>
+    <ClCompile Include="SplineCameraComponent.cpp" />
+    <ClCompile Include="SplineActor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -199,12 +210,23 @@
     <ClInclude Include="FPSActor.h">
       <Filter>GameSpecific</Filter>
     </ClInclude>
-    <ClInclude Include="FollowCameraComponent.h" />
     <ClInclude Include="FollowActor.h">
       <Filter>GameSpecific</Filter>
     </ClInclude>
-    <ClInclude Include="OrbitCameraComponent.h" />
-    <ClInclude Include="OrbitActor.h" />
+    <ClInclude Include="Spline.h">
+      <Filter>Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="FollowCameraComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitCameraComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="OrbitActor.h">
+      <Filter>GameSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="SplineCameraComponent.h" />
+    <ClInclude Include="SplineActor.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">

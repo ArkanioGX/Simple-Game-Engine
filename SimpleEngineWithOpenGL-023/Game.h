@@ -27,12 +27,13 @@ public:
 	Game& operator=(Game&&) = delete;
 
 private:
-	Game() : isRunning(true), 
+	Game() : isRunning(true),
 		isUpdatingActors(false),
-		fps(nullptr), 
+		fps(nullptr),
 		crosshair(nullptr),
 		follow(nullptr),
-		orbit(nullptr)
+		orbit(nullptr),
+		path(nullptr)
 	{}
 
 public:
@@ -67,5 +68,6 @@ private:
 	class SpriteComponent* crosshair;
 	class FollowActor* follow;
 	class OrbitActor* orbit;
+	class SplineActor* path;
 };
 
