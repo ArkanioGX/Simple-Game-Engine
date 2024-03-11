@@ -1,2 +1,2 @@
-ZQSD - Move
-Left click - Shoot
+|ZQSD - Move 
+| Left click - Shoot
