@@ -1,5 +1,5 @@
 #include "TorpMoveComponent.h"
-#include "Actor.h"
+#include "TorpedoActor.h"
 #include "LineSegment.h"
 #include "Collisions.h"
 #include "PhysicsSystem.h"
@@ -7,12 +7,17 @@
 #include "Vector3.h"
 #include "Game.h"
 #include "PlaneActor.h"
+#include "BoatActor.h"
+#include "AudioComponent.h"
+#include "Actor.h"
+#include "PlayerPlaneActor.h"
 
 TorpMoveComponent::TorpMoveComponent(Actor* ownerP):
 	MoveComponent(ownerP)
 {
 	owner.setRotation(Quaternion(Vector3::unitY, Maths::piOver2));
-	setForwardSpeed(300);
+	setForwardSpeed(400);
+	player = owner.getGame().getPlayer();
 }
 
 
@@ -39,6 +44,12 @@ void TorpMoveComponent::update(float dt)
 			// If we collided, reflect the ball about the normal
 			dir = Vector3(0.0f, -1.0f, 0.0f);
 			owner.rotateToNewForward(dir);
+			setForwardSpeed(1000);
+		}
+		BoatActor* boat = dynamic_cast<BoatActor*>(info.actor);
+		if (boat) {
+			boat->setState(Actor::ActorState::Dead);
+			hit();
 		}
 
 		
@@ -46,4 +57,10 @@ void TorpMoveComponent::update(float dt)
 
 	// Base class update moves based on forward speed
 	MoveComponent::update(dt);
+}
+
+void TorpMoveComponent::hit()
+{
+	player->ding();
+	owner.setState(Actor::ActorState::Dead);
 }

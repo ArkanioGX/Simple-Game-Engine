@@ -15,9 +15,7 @@ PlayerPlaneActor::PlayerPlaneActor() {
 	cameraComponent = new AirplaneCameraComponent(this);
 	moveComponent = new MoveComponent(this);
 
-	moveComponent->setForwardSpeed(100);
-
-	Log::info("Hello");
+	moveComponent->setForwardSpeed(350);
 }
 
 void PlayerPlaneActor::actorInput(const InputState& inputState)
@@ -25,11 +23,11 @@ void PlayerPlaneActor::actorInput(const InputState& inputState)
 	float strafeSpeed = 0;
 	if (inputState.keyboard.getKeyValue(SDL_SCANCODE_A))
 	{
-		strafeSpeed -= 400.0f;
+		strafeSpeed -= 500.0f;
 	}
 	if (inputState.keyboard.getKeyValue(SDL_SCANCODE_D))
 	{
-		strafeSpeed += 400.0f;
+		strafeSpeed += 500.0f;
 	}
 	
 	moveComponent->setStrafeSpeed(strafeSpeed);
@@ -45,4 +43,9 @@ void PlayerPlaneActor::shoot()
 {
 	TorpedoActor* torp = new TorpedoActor();
 	torp->setPosition(getPosition());
+}
+
+void PlayerPlaneActor::ding()
+{
+	audio->playEvent("event:/Ding");
 }

@@ -154,6 +154,9 @@
     <ClCompile Include="BackgroundSpriteComponent.cpp" />
     <ClCompile Include="BallActor.cpp" />
     <ClCompile Include="BallMoveComponent.cpp" />
+    <ClCompile Include="BoatActor.cpp" />
+    <ClCompile Include="BoatSpawnerActor.cpp" />
+    <ClCompile Include="BoatSpawnerComponent.cpp" />
     <ClCompile Include="BoxComponent.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="Collisions.cpp" />
@@ -188,6 +191,8 @@
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="RendererOGL.cpp" />
     <ClCompile Include="Assets.cpp" />
+    <ClCompile Include="SeaPlacerActor.cpp" />
+    <ClCompile Include="SeaPlacerComponent.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="SoundEvent.cpp" />
     <ClCompile Include="Sphere.cpp" />
@@ -216,6 +221,9 @@
     <ClInclude Include="BackgroundSpriteComponent.h" />
     <ClInclude Include="BallActor.h" />
     <ClInclude Include="BallMoveComponent.h" />
+    <ClInclude Include="BoatActor.h" />
+    <ClInclude Include="BoatSpawnerActor.h" />
+    <ClInclude Include="BoatSpawnerComponent.h" />
     <ClInclude Include="BoxComponent.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="Collisions.h" />
@@ -252,6 +260,8 @@
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="RendererOGL.h" />
     <ClInclude Include="Assets.h" />
+    <ClInclude Include="SeaPlacerActor.h" />
+    <ClInclude Include="SeaPlacerComponent.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SoundEvent.h" />
     <ClInclude Include="Sphere.h" />

@@ -46,6 +46,7 @@ public:
 	void addPlane(class PlaneActor* plane);
 	void removePlane(class PlaneActor* plane);
 	vector<PlaneActor*>& getPlanes() { return planes; }
+	class PlayerPlaneActor* getPlayer() { return player; }
 
 
 private:

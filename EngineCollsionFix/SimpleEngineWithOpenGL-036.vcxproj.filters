@@ -157,12 +157,27 @@
     <ClCompile Include="TargetActor.cpp">
       <Filter>Prefabs</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerPlaneActor.cpp" />
     <ClCompile Include="AirplaneCameraComponent.cpp">
       <Filter>Components</Filter>
     </ClCompile>
-    <ClCompile Include="TorpedoActor.cpp" />
-    <ClCompile Include="TorpMoveComponent.cpp" />
+    <ClCompile Include="SeaPlacerComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TorpMoveComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerPlaneActor.cpp">
+      <Filter>Prefabs</Filter>
+    </ClCompile>
+    <ClCompile Include="SeaPlacerActor.cpp">
+      <Filter>Prefabs</Filter>
+    </ClCompile>
+    <ClCompile Include="TorpedoActor.cpp">
+      <Filter>Prefabs</Filter>
+    </ClCompile>
+    <ClCompile Include="BoatActor.cpp" />
+    <ClCompile Include="BoatSpawnerActor.cpp" />
+    <ClCompile Include="BoatSpawnerComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -329,12 +344,27 @@
     <ClInclude Include="TargetActor.h">
       <Filter>Prefabs</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerPlaneActor.h" />
     <ClInclude Include="AirplaneCameraComponent.h">
       <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="TorpedoActor.h" />
-    <ClInclude Include="TorpMoveComponent.h" />
+    <ClInclude Include="SeaPlacerComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TorpMoveComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerPlaneActor.h">
+      <Filter>Prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="SeaPlacerActor.h">
+      <Filter>Prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="TorpedoActor.h">
+      <Filter>Prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="BoatActor.h" />
+    <ClInclude Include="BoatSpawnerActor.h" />
+    <ClInclude Include="BoatSpawnerComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">

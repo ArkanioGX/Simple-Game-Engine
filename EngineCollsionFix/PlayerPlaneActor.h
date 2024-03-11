@@ -7,6 +7,7 @@ public:
 	PlayerPlaneActor();
 	void actorInput(const struct InputState& inputState) override;
 	void shoot();
+	void ding();
 
 private:
 	class MoveComponent* moveComponent;

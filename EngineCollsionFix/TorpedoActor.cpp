@@ -11,3 +11,4 @@ TorpedoActor::TorpedoActor()
 
 	moveComponent = new TorpMoveComponent(this);
 }
+

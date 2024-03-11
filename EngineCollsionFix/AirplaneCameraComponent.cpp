@@ -3,7 +3,7 @@
 
 AirplaneCameraComponent::AirplaneCameraComponent(Actor* ownerP) :
 	CameraComponent(ownerP),
-	offset(Vector3(0,0.1,800))
+	offset(Vector3(0,0.1,1350))
 {
 }
 

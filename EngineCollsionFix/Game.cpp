@@ -14,6 +14,8 @@
 #include "TargetActor.h"
 #include "PlayerPlaneActor.h"
 #include "TorpedoActor.h"
+#include "SeaPlacerActor.h"
+#include "BoatSpawnerActor.h"
 #include <algorithm>
 #include <algorithm>
 
@@ -57,52 +59,16 @@ void Game::load()
 	Assets::loadMesh("Res\\Meshes\\Airplane.gpmesh", "Mesh_Airplane");
 
 	player = new PlayerPlaneActor();
-	player->setPosition(Vector3(0.0f, -250.0f, 0.0f));
+	player->setPosition(Vector3(0.0f, 0.0f, 800.0f));
 	player->setRotation(Quaternion(Vector3::unitZ, -Maths::piOver2));
 	player->setScale(150.0f);
 
+	//Sea Plane Manager
+	SeaPlacerActor* SPActor = new SeaPlacerActor();
+
+	BoatSpawnerActor* BA = new BoatSpawnerActor();
+	BA->setPosition(Vector3(0,-1500,0));
 	
-	// Floor and walls
-
-	// Setup floor
-	const float start = -1250.0f;
-	const float size = 250.0f;
-	for (int i = 0; i < 10; i++)
-	{
-		for (int j = 0; j < 10; j++)
-		{
-			PlaneActor* p = new PlaneActor();
-			p->setPosition(Vector3(start + i * size, start + j * size, -100.0f));
-		}
-	}
-
-	/*
-	// Left/right walls
-	q = Quaternion(Vector3::unitX, Maths::piOver2);
-	for (int i = 0; i < 10; i++)
-	{
-		PlaneActor* p = new PlaneActor();
-		p->setPosition(Vector3(start + i * size, start - size, 0.0f));
-		p->setRotation(q);
-
-		p = new PlaneActor();
-		p->setPosition(Vector3(start + i * size, -start + size, 0.0f));
-		p->setRotation(q);
-	}
-
-	q = Quaternion::concatenate(q, Quaternion(Vector3::unitZ, Maths::piOver2));
-	// Forward/back walls
-	for (int i = 0; i < 10; i++)
-	{
-		PlaneActor* p = new PlaneActor();
-		p->setPosition(Vector3(start - size, start + i * size, 0.0f));
-		p->setRotation(q);
-
-		p = new PlaneActor();
-		p->setPosition(Vector3(-start + size, start + i * size, 0.0f));
-		p->setRotation(q);
-	}*/
-
 	// Setup lights
 	renderer.setAmbientLight(Vector3(0.2f, 0.2f, 0.2f));
 	DirectionalLight& dir = renderer.getDirectionalLight();
@@ -110,24 +76,8 @@ void Game::load()
 	dir.diffuseColor = Vector3(0.78f, 0.88f, 1.0f);
 	dir.specColor = Vector3(0.8f, 0.8f, 0.8f);
 
-	// Create spheres with audio components playing different sounds
-	SphereActor* soundSphere = new SphereActor();
-	soundSphere->setPosition(Vector3(500.0f, -75.0f, 0.0f));
-	soundSphere->setScale(1.0f);
-	AudioComponent* ac = new AudioComponent(soundSphere);
-	ac->playEvent("event:/FireLoop");
-
 	// Start music
 	musicEvent = audioSystem.playEvent("event:/Music");
-
-	TargetActor* t = new TargetActor();
-	t->setPosition(Vector3(1450.0f, 0.0f, 100.0f));
-	t = new TargetActor();
-	t->setPosition(Vector3(1450.0f, 0.0f, 400.0f));
-	t = new TargetActor();
-	t->setPosition(Vector3(1450.0f, -500.0f, 200.0f));
-	t = new TargetActor();
-	t->setPosition(Vector3(1450.0f, 500.0f, 200.0f));
 }
 
 void Game::processInput()

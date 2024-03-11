@@ -7,6 +7,9 @@ public:
 	TorpMoveComponent(class Actor* ownerP);
 
 	void update(float dt) override;
+
+	void hit();
 private:
+	class PlayerPlaneActor* player;
 };
 
