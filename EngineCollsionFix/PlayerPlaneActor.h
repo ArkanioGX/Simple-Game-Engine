@@ -5,9 +5,13 @@ class PlayerPlaneActor : public Actor
 {
 public:
 	PlayerPlaneActor();
+	void actorInput(const struct InputState& inputState) override;
+	void shoot();
 
 private:
+	class MoveComponent* moveComponent;
 	class AudioComponent* audio;
+	class AirplaneCameraComponent* cameraComponent;
 
 };
 

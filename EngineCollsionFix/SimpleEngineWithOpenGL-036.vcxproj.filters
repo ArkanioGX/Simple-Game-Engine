@@ -158,6 +158,11 @@
       <Filter>Prefabs</Filter>
     </ClCompile>
     <ClCompile Include="PlayerPlaneActor.cpp" />
+    <ClCompile Include="AirplaneCameraComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TorpedoActor.cpp" />
+    <ClCompile Include="TorpMoveComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -325,6 +330,11 @@
       <Filter>Prefabs</Filter>
     </ClInclude>
     <ClInclude Include="PlayerPlaneActor.h" />
+    <ClInclude Include="AirplaneCameraComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TorpedoActor.h" />
+    <ClInclude Include="TorpMoveComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">

@@ -13,6 +13,7 @@
 #include "SplineActor.h"
 #include "TargetActor.h"
 #include "PlayerPlaneActor.h"
+#include "TorpedoActor.h"
 #include <algorithm>
 #include <algorithm>
 
@@ -44,6 +45,8 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Textures\\RacingCar.png", "RacingCar");
 	Assets::loadTexture(renderer, "Res\\Textures\\Rifle.png", "Rifle");
 	Assets::loadTexture(renderer, "Res\\Textures\\Target.png", "Target");
+	Assets::loadTexture(renderer, "Res\\Textures\\Water.png", "Water");
+	Assets::loadTexture(renderer, "Res\\Textures\\Airplane.png", "Airplane");
 
 	Assets::loadMesh("Res\\Meshes\\Cube.gpmesh", "Mesh_Cube");
 	Assets::loadMesh("Res\\Meshes\\Plane.gpmesh", "Mesh_Plane");
@@ -51,25 +54,14 @@ void Game::load()
 	Assets::loadMesh("Res\\Meshes\\Rifle.gpmesh", "Mesh_Rifle");
 	Assets::loadMesh("Res\\Meshes\\RacingCar.gpmesh", "Mesh_RacingCar");
 	Assets::loadMesh("Res\\Meshes\\Target.gpmesh", "Mesh_Target");
-	Assets::loadMesh("Res\\Meshes\\Cube.gpmesh", "Mesh_AirPlane");
+	Assets::loadMesh("Res\\Meshes\\Airplane.gpmesh", "Mesh_Airplane");
 
-	fps = new FPSActor();
-
-	PlayerPlaneActor* player = new PlayerPlaneActor();
-	player->setPosition(Vector3(200.0f, -75.0f, 0.0f));
+	player = new PlayerPlaneActor();
+	player->setPosition(Vector3(0.0f, -250.0f, 0.0f));
+	player->setRotation(Quaternion(Vector3::unitZ, -Maths::piOver2));
 	player->setScale(150.0f);
 
-	CubeActor* a = new CubeActor();
-	a->setPosition(Vector3(200.0f, 105.0f, 0.0f));
-	a->setScale(100.0f);
-	Quaternion q(Vector3::unitY, -Maths::piOver2);
-	q = Quaternion::concatenate(q, Quaternion(Vector3::unitZ, Maths::pi + Maths::pi / 4.0f));
-	a->setRotation(q);
-
-	SphereActor* b = new SphereActor();
-	b->setPosition(Vector3(200.0f, -75.0f, 0.0f));
-	b->setScale(3.0f);
-
+	
 	// Floor and walls
 
 	// Setup floor
@@ -124,11 +116,6 @@ void Game::load()
 	soundSphere->setScale(1.0f);
 	AudioComponent* ac = new AudioComponent(soundSphere);
 	ac->playEvent("event:/FireLoop");
-
-	// Corsshair
-	Actor* crosshairActor = new Actor();
-	crosshairActor->setScale(2.0f);
-	crosshair = new SpriteComponent(crosshairActor, Assets::getTexture("Crosshair"));
 
 	// Start music
 	musicEvent = audioSystem.playEvent("event:/Music");

@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClCompile Include="AABB.cpp" />
     <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="AirplaneCameraComponent.cpp" />
     <ClCompile Include="AnimSpriteComponent.cpp" />
     <ClCompile Include="AudioComponent.cpp" />
     <ClCompile Include="AudioSystem.cpp" />
@@ -198,6 +199,8 @@
     <ClCompile Include="TargetActor.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="TorpedoActor.cpp" />
+    <ClCompile Include="TorpMoveComponent.cpp" />
     <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="Vector3.cpp" />
     <ClCompile Include="VertexArray.cpp" />
@@ -206,6 +209,7 @@
   <ItemGroup>
     <ClInclude Include="AABB.h" />
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="AirplaneCameraComponent.h" />
     <ClInclude Include="AnimSpriteComponent.h" />
     <ClInclude Include="AudioComponent.h" />
     <ClInclude Include="AudioSystem.h" />
@@ -259,6 +263,8 @@
     <ClInclude Include="TargetActor.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="TorpedoActor.h" />
+    <ClInclude Include="TorpMoveComponent.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="Vector3.h" />
     <ClInclude Include="VertexArray.h" />
