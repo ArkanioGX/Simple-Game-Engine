@@ -157,6 +157,10 @@
     <ClCompile Include="TargetActor.cpp">
       <Filter>Prefabs</Filter>
     </ClCompile>
+    <ClCompile Include="BowlingBallActor.cpp" />
+    <ClCompile Include="PinActor.cpp" />
+    <ClCompile Include="BowlingManager.cpp" />
+    <ClCompile Include="PhysicsBodyComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -323,6 +327,10 @@
     <ClInclude Include="TargetActor.h">
       <Filter>Prefabs</Filter>
     </ClInclude>
+    <ClInclude Include="BowlingBallActor.h" />
+    <ClInclude Include="PinActor.h" />
+    <ClInclude Include="BowlingManager.h" />
+    <ClInclude Include="PhysicsBodyComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">
