@@ -7,8 +7,11 @@ BowlingCameraComponent::BowlingCameraComponent(Actor* ownerP, int updateOrder):
 	pitchSpeed(0),
 	yawSpeed(0),
 	targetBall(nullptr),
-	lanePosition(Vector3::zero)
+	lanePosition(Vector3(160,397,0)), 
+	offset(0.0f, 150.0f, 50.0f),
+	up(Vector3::unitZ)
 {
+	setCamPhase(camPhase::Orbit);
 }
 
 void BowlingCameraComponent::update(float dt)
@@ -29,6 +32,11 @@ void BowlingCameraComponent::update(float dt)
 	setViewMatrix(view);
 }
 
+void BowlingCameraComponent::setTarget(Actor* t)
+{
+	targetBall = t;
+}
+
 Matrix4 BowlingCameraComponent::orbitCamUpdate(float dt)
 {
 	Quaternion yaw{ Vector3::unitZ, yawSpeed * dt };
@@ -47,7 +55,7 @@ Matrix4 BowlingCameraComponent::orbitCamUpdate(float dt)
 	up = Vector3::transform(up, pitch);
 
 	Vector3 target = targetBall->getPosition();
-	Vector3 cameraPosition = target + offset;
+	cameraPosition = target + offset;
 	return Matrix4::createLookAt(cameraPosition, target, up);
 	
 }

@@ -10,15 +10,21 @@ public:
 	float getPitchSpeed() const { return pitchSpeed; }
 	float getYawSpeed() const { return yawSpeed; }
 
-	void setPitchSpeed(float pitchSpeedP);
-	void setYawSpeed(float yawSpeedP);
+	void setTarget(Actor* t);
+
+	void setPitchSpeed(float pitchSpeedP) { pitchSpeed = pitchSpeedP; }
+	void setYawSpeed(float yawSpeedP) { yawSpeed = yawSpeedP; }
 
 	enum camPhase {Orbit, LookAt};
 
-	void setCamPhase(camPhase phase);
+	void setCamPhase(camPhase phase) { currentCamPhase = phase; }
 
 	Matrix4 orbitCamUpdate(float dt);
 	Matrix4 lookCamUpdate(float dt);
+
+	void setLanePosition(Vector3 pos) { lanePosition = pos; }
+
+	Vector3 getCurrentPos() { return cameraPosition; }
 
 
 private:
@@ -30,6 +36,8 @@ private:
 	Vector3 offset;
 	// Up vector of camera
 	Vector3 up;
+
+	Vector3 cameraPosition;
 
 	camPhase currentCamPhase;
 

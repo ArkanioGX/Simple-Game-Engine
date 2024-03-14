@@ -15,6 +15,7 @@
 #include "BowlingBallActor.h"
 #include "PinActor.h"
 #include "BowlingManager.h"
+#include "ArrowIndicatorActor.h"
 #include <algorithm>
 #include <algorithm>
 
@@ -39,18 +40,17 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Textures\\Default.png", "Default");
 	Assets::loadTexture(renderer, "Res\\Textures\\Cube.png", "Cube");
 	Assets::loadTexture(renderer, "Res\\Textures\\Plane.png", "Plane");
-	Assets::loadTexture(renderer, "Res\\Textures\\Rifle.png", "Rifle");
 	Assets::loadTexture(renderer, "Res\\Textures\\Sphere.png", "Sphere");
 	Assets::loadTexture(renderer, "Res\\Textures\\Pin.png", "Pin");
 	Assets::loadTexture(renderer, "Res\\Textures\\Planks.png", "Planks");
+	Assets::loadTexture(renderer, "Res\\Textures\\Side.png", "Side");
+	Assets::loadTexture(renderer, "Res\\Textures\\Arrow.png", "Arrow");
 
 	Assets::loadMesh("Res\\Meshes\\Cube.gpmesh", "Mesh_Cube");
-	Assets::loadMesh("Res\\Meshes\\Rifle.gpmesh", "Mesh_Rifle");
 	Assets::loadMesh("Res\\Meshes\\Plane.gpmesh", "Mesh_Plane");
 	Assets::loadMesh("Res\\Meshes\\Sphere.gpmesh", "Mesh_Sphere");
 	Assets::loadMesh("Res\\Meshes\\Pin.gpmesh", "Mesh_Pin");
-
-	fps = new FPSActor();
+	Assets::loadMesh("Res\\Meshes\\Arrow.gpmesh", "Mesh_Arrow");
 
 	BowlingManager* bm = new BowlingManager();
 
@@ -63,18 +63,36 @@ void Game::load()
 
 	// Setup floor
 	const float start = -50;
-	const float size = 25.0f;
-	for (int i = 0; i < 4; i++)
+	const float size = 100.0f;
+	for (int i = 0; i < 2; i++)
 	{
-		for (int j = 0; j < 28; j++)
+		for (int j = 0; j < 9; j++)
 		{
 			PlaneActor* p = new PlaneActor();
 			p->setPosition(Vector3(start + i * size, start + j * size, -100.0f));
+
+			if (j == 8) {
+				p = new PlaneActor();
+				p->setPosition(Vector3(start + i * size , start + j * size + 50, -150.0f));
+				p->setRotation(Quaternion(Vector3::unitX, Maths::piOver2));
+			}
 		}
 	}
 
+	//Left Side Wall
+	for (int j = 0; j < 9; j++)
+	{
+		CubeActor* c = new CubeActor();
+		c->setPosition(Vector3(-150, start + j * size, -100.0f));
+		c->setScale(100.0f);
+
+		c = new CubeActor();
+		c->setPosition(Vector3(150, start + j * size, -100.0f));
+		c->setScale(100.0f);
+	}
+
 	// Setup lights
-	renderer.setAmbientLight(Vector3(0.2f, 0.2f, 0.2f));
+	renderer.setAmbientLight(Vector3(0.3f, 0.3f, 0.2f));
 	DirectionalLight& dir = renderer.getDirectionalLight();
 	dir.direction = Vector3(0.0f, -0.707f, -0.707f);
 	dir.diffuseColor = Vector3(0.78f, 0.88f, 1.0f);

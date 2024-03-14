@@ -7,6 +7,6 @@ BowlingBallActor::BowlingBallActor()
 	MeshComponent* mc = new MeshComponent(this);
 	mc->setMesh(Assets::getMesh("Mesh_Sphere"));
 	setScale(1.4f);
-	setPosition(Vector3(-15, 650, -80));
+	setPosition(Vector3(0, 780, -80));
 	
 }

@@ -164,6 +164,7 @@
     <ClCompile Include="SphereComponent.cpp" />
     <ClCompile Include="BowlingCameraComponent.cpp" />
     <ClCompile Include="BowlingManagerComponent.cpp" />
+    <ClCompile Include="ArrowIndicatorActor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -337,6 +338,7 @@
     <ClInclude Include="SphereComponent.h" />
     <ClInclude Include="BowlingCameraComponent.h" />
     <ClInclude Include="BowlingManagerComponent.h" />
+    <ClInclude Include="ArrowIndicatorActor.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">

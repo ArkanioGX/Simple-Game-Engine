@@ -148,6 +148,7 @@
     <ClCompile Include="AABB.cpp" />
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="AnimSpriteComponent.cpp" />
+    <ClCompile Include="ArrowIndicatorActor.cpp" />
     <ClCompile Include="AudioComponent.cpp" />
     <ClCompile Include="AudioSystem.cpp" />
     <ClCompile Include="BackgroundSpriteComponent.cpp" />
@@ -213,6 +214,7 @@
     <ClInclude Include="AABB.h" />
     <ClInclude Include="Actor.h" />
     <ClInclude Include="AnimSpriteComponent.h" />
+    <ClInclude Include="ArrowIndicatorActor.h" />
     <ClInclude Include="AudioComponent.h" />
     <ClInclude Include="AudioSystem.h" />
     <ClInclude Include="BackgroundSpriteComponent.h" />
