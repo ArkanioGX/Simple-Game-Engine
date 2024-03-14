@@ -154,7 +154,9 @@
     <ClCompile Include="BallActor.cpp" />
     <ClCompile Include="BallMoveComponent.cpp" />
     <ClCompile Include="BowlingBallActor.cpp" />
+    <ClCompile Include="BowlingCameraComponent.cpp" />
     <ClCompile Include="BowlingManager.cpp" />
+    <ClCompile Include="BowlingManagerComponent.cpp" />
     <ClCompile Include="BoxComponent.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="Collisions.cpp" />
@@ -194,6 +196,7 @@
     <ClCompile Include="SoundEvent.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="SphereActor.cpp" />
+    <ClCompile Include="SphereComponent.cpp" />
     <ClCompile Include="Spline.cpp" />
     <ClCompile Include="SplineActor.cpp" />
     <ClCompile Include="SplineCameraComponent.cpp" />
@@ -216,7 +219,9 @@
     <ClInclude Include="BallActor.h" />
     <ClInclude Include="BallMoveComponent.h" />
     <ClInclude Include="BowlingBallActor.h" />
+    <ClInclude Include="BowlingCameraComponent.h" />
     <ClInclude Include="BowlingManager.h" />
+    <ClInclude Include="BowlingManagerComponent.h" />
     <ClInclude Include="BoxComponent.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="Collisions.h" />
@@ -258,6 +263,7 @@
     <ClInclude Include="SoundEvent.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="SphereActor.h" />
+    <ClInclude Include="SphereComponent.h" />
     <ClInclude Include="Spline.h" />
     <ClInclude Include="SplineActor.h" />
     <ClInclude Include="SplineCameraComponent.h" />

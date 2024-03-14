@@ -27,7 +27,9 @@ public:
 
 	void addBox(class BoxComponent* box);
 	void removeBox(class BoxComponent* box);
+
 	bool segmentCast(const LineSegment& l, CollisionInfo& outColl);
+	bool boxCast(class BoxComponent* box, CollisionInfo& outColl);
 
 	// Tests collisions using naive pairwise
 	void testPairwise(std::function<void(class Actor*, class Actor*)> f);

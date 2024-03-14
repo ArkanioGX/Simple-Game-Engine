@@ -1,4 +1,5 @@
 #include "FPSCameraComponent.h"
+#include "Log.h"
 
 FPSCameraComponent::FPSCameraComponent(Actor* ownerP):
 	CameraComponent(ownerP),
@@ -21,6 +22,7 @@ void FPSCameraComponent::update(float dt)
 	Vector3 target = cameraPosition + viewForward * 100.0f;
 	Vector3 up = Vector3::transform(Vector3::unitZ, q);
 	Matrix4 view = Matrix4::createLookAt(cameraPosition, target, up);
+
 	setViewMatrix(view);
 }
 
