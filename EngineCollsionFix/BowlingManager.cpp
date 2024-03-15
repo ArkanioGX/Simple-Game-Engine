@@ -9,6 +9,7 @@ BowlingManager::BowlingManager()
 {
 	manager = new BowlingManagerComponent(this);
 	camera = new BowlingCameraComponent(this);
+	
 	camera->setTarget(manager->getBall());
 }
 

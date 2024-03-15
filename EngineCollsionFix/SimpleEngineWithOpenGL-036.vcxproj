@@ -158,6 +158,7 @@
     <ClCompile Include="BowlingCameraComponent.cpp" />
     <ClCompile Include="BowlingManager.cpp" />
     <ClCompile Include="BowlingManagerComponent.cpp" />
+    <ClCompile Include="BowlingMoveComponent.cpp" />
     <ClCompile Include="BoxComponent.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="Collisions.cpp" />
@@ -224,6 +225,7 @@
     <ClInclude Include="BowlingCameraComponent.h" />
     <ClInclude Include="BowlingManager.h" />
     <ClInclude Include="BowlingManagerComponent.h" />
+    <ClInclude Include="BowlingMoveComponent.h" />
     <ClInclude Include="BoxComponent.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="Collisions.h" />

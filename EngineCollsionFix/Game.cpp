@@ -16,6 +16,7 @@
 #include "PinActor.h"
 #include "BowlingManager.h"
 #include "ArrowIndicatorActor.h"
+#include "BowlingManagerComponent.h"
 #include <algorithm>
 #include <algorithm>
 
@@ -56,6 +57,31 @@ void Game::load()
 
 	Quaternion q(Vector3::unitY, -Maths::piOver2);
 	q = Quaternion::concatenate(q, Quaternion(Vector3::unitZ, Maths::pi + Maths::pi / 4.0f));
+
+	bm->getManager()->placePins();
+	 /*
+	//Pins Placement
+	Vector3 basePos = Vector3(-100, 100, -100);
+	float nRange = 4;
+	float size = 200;
+	for (int n = nRange; n > 0; n--) {
+		for (int i = 0; i < n; i++) {
+			PinActor* pin = new PinActor();
+			Vector3 pos = Vector3::zero;
+
+			pos.x = (size / (n + 1)) * (i + 1);
+			pos.y = (size / nRange) * -n;
+
+			pos += basePos;
+
+			pin->setPosition(pos);
+
+			pin->setScale(100.0f);
+			//pin->setRotation(Quaternion(Vector3::unitX, Maths::piOver2));
+
+			//pinsPlaced.emplace_back(pin);
+		}
+	}*/
 
 
 

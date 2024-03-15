@@ -6,7 +6,6 @@ public:
 	PinActor();
 
 private:
-	class MeshComponent* meshComponent;
-	class BoxComponent* boxComponent;
+	class BoxComponent* box;
 };
 

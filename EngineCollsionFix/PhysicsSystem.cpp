@@ -2,6 +2,7 @@
 #include "Collisions.h"
 #include "BoxComponent.h"
 #include "SphereComponent.h"
+#include "Actor.h"
 #include <algorithm>
 
 PhysicsSystem::PhysicsSystem()
@@ -56,6 +57,8 @@ bool PhysicsSystem::boxCast(BoxComponent* boxComponent, CollisionInfo& outColl)
 {
 	bool collided = false;
 
+	float closestT = Maths::infinity;
+
 	Vector3 norm;
 	// Test against all boxes
 	for (auto box : boxes)
@@ -63,11 +66,15 @@ bool PhysicsSystem::boxCast(BoxComponent* boxComponent, CollisionInfo& outColl)
 		// Does the segment intersect with the box?
 		if (Collisions::intersect(boxComponent->getWorldBox(), box->getWorldBox()))
 		{
-			outColl.point = Vector3::zero;
-			outColl.normal = Vector3::zero;
-			outColl.box = box;
-			outColl.actor = &box->getOwner();
-			collided = true;
+			float t = (boxComponent->getOwner().getPosition() - box->getOwner().getPosition()).length();
+			if (t < closestT)
+			{
+				outColl.point = Vector3::zero;
+				outColl.normal = Vector3::zero;
+				outColl.box = box;
+				outColl.actor = &box->getOwner();
+				collided = true;
+			}
 		}
 	}
 	return collided;

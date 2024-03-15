@@ -4,5 +4,8 @@ class CubeActor : public Actor
 {
 public:
 	CubeActor();
+
+private:
+	class BoxComponent* box;
 };
 

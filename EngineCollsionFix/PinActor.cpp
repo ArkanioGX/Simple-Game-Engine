@@ -5,14 +5,9 @@
 
 PinActor::PinActor()
 {
-	Mesh* mesh = &Assets::getMesh("Mesh_Pin");
+	MeshComponent* mc = new MeshComponent(this);
+	mc->setMesh(Assets::getMesh("Mesh_Pin"));
 
-	meshComponent = new MeshComponent(this);
-	meshComponent->setMesh(*mesh);
-
-	setScale(13.0f);
-	setRotation(Quaternion(Vector3::unitX, Maths::piOver2));
-
-	boxComponent = new BoxComponent(this);
-	boxComponent->setObjectBox(mesh->getBox());
+	box = new BoxComponent(this);
+	box->setObjectBox(Assets::getMesh("Mesh_Pin").getBox());
 }
