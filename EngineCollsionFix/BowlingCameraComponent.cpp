@@ -8,7 +8,7 @@ BowlingCameraComponent::BowlingCameraComponent(Actor* ownerP, int updateOrder):
 	yawSpeed(0),
 	targetBall(nullptr),
 	lanePosition(Vector3(160,397,0)), 
-	offset(0.0f, 150.0f, 50.0f),
+	offset(0.0f, 150.0f, 120.0f),
 	up(Vector3::unitZ)
 {
 	setCamPhase(camPhase::Orbit);

@@ -14,7 +14,7 @@ BowlingBallActor::BowlingBallActor()
 
 	moveComponent = new BowlingMoveComponent(this);
 
-	setScale(1.4f);
+	setScale(1.3f);
 	setPosition(Vector3(0, 780, -80));
 	
 }

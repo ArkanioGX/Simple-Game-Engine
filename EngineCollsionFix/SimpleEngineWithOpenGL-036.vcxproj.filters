@@ -166,6 +166,9 @@
     <ClCompile Include="BowlingManagerComponent.cpp" />
     <ClCompile Include="ArrowIndicatorActor.cpp" />
     <ClCompile Include="BowlingMoveComponent.cpp" />
+    <ClCompile Include="PinMoveComponent.cpp" />
+    <ClCompile Include="ScoreShowActor.cpp" />
+    <ClCompile Include="ScoreShowComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -341,6 +344,9 @@
     <ClInclude Include="BowlingManagerComponent.h" />
     <ClInclude Include="ArrowIndicatorActor.h" />
     <ClInclude Include="BowlingMoveComponent.h" />
+    <ClInclude Include="PinMoveComponent.h" />
+    <ClInclude Include="ScoreShowActor.h" />
+    <ClInclude Include="ScoreShowComponent.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">

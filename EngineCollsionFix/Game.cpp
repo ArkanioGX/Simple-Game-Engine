@@ -47,8 +47,23 @@ void Game::load()
 	Assets::loadTexture(renderer, "Res\\Textures\\Side.png", "Side");
 	Assets::loadTexture(renderer, "Res\\Textures\\Arrow.png", "Arrow");
 
+	//Score Numbers
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_0.png", "0");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_1.png", "1");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_2.png", "2");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_3.png", "3");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_4.png", "4");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_5.png", "5");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_6.png", "6");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_7.png", "7");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_8.png", "8");
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_9.png", "9");
+
+	Assets::loadTexture(renderer, "Res\\Textures\\Score\\Number_Win.png", "Win");
+
 	Assets::loadMesh("Res\\Meshes\\Cube.gpmesh", "Mesh_Cube");
 	Assets::loadMesh("Res\\Meshes\\Plane.gpmesh", "Mesh_Plane");
+	Assets::loadMesh("Res\\Meshes\\ScorePlane.gpmesh", "Mesh_ScorePlane");
 	Assets::loadMesh("Res\\Meshes\\Sphere.gpmesh", "Mesh_Sphere");
 	Assets::loadMesh("Res\\Meshes\\Pin.gpmesh", "Mesh_Pin");
 	Assets::loadMesh("Res\\Meshes\\Arrow.gpmesh", "Mesh_Arrow");
@@ -124,14 +139,6 @@ void Game::load()
 	dir.diffuseColor = Vector3(0.78f, 0.88f, 1.0f);
 	dir.specColor = Vector3(0.8f, 0.8f, 0.8f);
 
-	// Create spheres with audio components playing different sounds
-	SphereActor* soundSphere = new SphereActor();
-	soundSphere->setPosition(Vector3(500.0f, -75.0f, 0.0f));
-	soundSphere->setScale(1.0f);
-	AudioComponent* ac = new AudioComponent(soundSphere);
-	ac->playEvent("event:/FireLoop");
-	// Start music
-	musicEvent = audioSystem.playEvent("event:/Music");
 }
 
 void Game::processInput()

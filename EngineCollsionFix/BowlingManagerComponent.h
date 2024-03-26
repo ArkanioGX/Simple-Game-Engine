@@ -16,6 +16,8 @@ public:
 
 	void Interact();
 
+	void calculateScore();
+
 	void nextPhase();
 	
 private:
@@ -23,6 +25,7 @@ private:
 
 	class BowlingBallActor* currentBall;
 	class ArrowIndicatorActor* arrow;
+	class ScoreShowActor* scoreAct;
 
 	enum gamePhase {Reset, BallOrientation, BallPower, BallWatch};
 
@@ -30,8 +33,16 @@ private:
 
 	float time = 0;
 
+	int launchN = 0;
+	int score;
+
 	Vector3 currentFWD = Vector3::negUnitY;
 	float currentPower = 10;
+
+	bool hasReachedEnd = false;
+	float endT = 0;
+	float entTimerTime = 5;
+
 };
 
 constexpr float MIN_POWER = 100;

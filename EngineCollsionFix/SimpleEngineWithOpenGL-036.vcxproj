@@ -187,6 +187,7 @@
     <ClCompile Include="PhysicsBodyComponent.cpp" />
     <ClCompile Include="PhysicsSystem.cpp" />
     <ClCompile Include="PinActor.cpp" />
+    <ClCompile Include="PinMoveComponent.cpp" />
     <ClCompile Include="Plane.cpp" />
     <ClCompile Include="PlaneActor.cpp" />
     <ClCompile Include="Quaternion.cpp" />
@@ -194,6 +195,8 @@
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="RendererOGL.cpp" />
     <ClCompile Include="Assets.cpp" />
+    <ClCompile Include="ScoreShowActor.cpp" />
+    <ClCompile Include="ScoreShowComponent.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="SoundEvent.cpp" />
     <ClCompile Include="Sphere.cpp" />
@@ -256,6 +259,7 @@
     <ClInclude Include="PhysicsBodyComponent.h" />
     <ClInclude Include="PhysicsSystem.h" />
     <ClInclude Include="PinActor.h" />
+    <ClInclude Include="PinMoveComponent.h" />
     <ClInclude Include="Plane.h" />
     <ClInclude Include="PlaneActor.h" />
     <ClInclude Include="Quaternion.h" />
@@ -263,6 +267,8 @@
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="RendererOGL.h" />
     <ClInclude Include="Assets.h" />
+    <ClInclude Include="ScoreShowActor.h" />
+    <ClInclude Include="ScoreShowComponent.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="SoundEvent.h" />
     <ClInclude Include="Sphere.h" />
