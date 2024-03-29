@@ -5,7 +5,7 @@
 // Released under the BSD License
 // See LICENSE in root directory for full details.
 // ----------------------------------------------------------------
-
+/*
 #pragma once
 #include "Matrix4.h"
 #include <string>
@@ -41,4 +41,4 @@ protected:
 private:
 	class AudioSystem* system;
 	unsigned int id;
-};
+};*/

@@ -11,7 +11,7 @@ public:
 
 
 private:
-	class AudioComponent* audio;
+	//class AudioComponent* audio;
 	class BallMoveComponent* ballMove;
 	float lifetimeSpan;
 };

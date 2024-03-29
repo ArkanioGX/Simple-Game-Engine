@@ -6,7 +6,7 @@
 #include "CubeActor.h"
 #include "SphereActor.h"
 #include "PlaneActor.h"
-#include "AudioComponent.h"
+//#include "AudioComponent.h"
 #include "FPSActor.h"
 #include "FollowActor.h"
 #include "OrbitActor.h"
@@ -24,7 +24,7 @@ bool Game::initialize()
 {
 	bool isWindowInit = window.initialize();
 	bool isRendererInit = renderer.initialize(window);
-	bool isAudioInit = audioSystem.initialize();
+	bool isAudioInit = true;// audioSystem.initialize();
 	bool isInputInit = inputSystem.initialize();
 
 	return isWindowInit && isRendererInit && isAudioInit && isInputInit; // Return bool && bool && bool ...to detect error
@@ -173,7 +173,7 @@ void Game::processInput()
 void Game::update(float dt)
 {
 	// Update audio
-	audioSystem.update(dt);
+	//audioSystem.update(dt);
 
 	// Update actors 
 	isUpdatingActors = true;
@@ -244,7 +244,7 @@ void Game::close()
 {
 	inputSystem.close();
 	renderer.close();
-	audioSystem.close();
+	//audioSystem.close();
 	window.close();
 	SDL_Quit();
 }

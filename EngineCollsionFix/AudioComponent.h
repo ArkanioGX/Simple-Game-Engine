@@ -1,3 +1,4 @@
+/*
 #pragma once
 #include "Component.h"
 #include "SoundEvent.h"
@@ -18,5 +19,5 @@ public:
 private:
 	std::vector<SoundEvent> events2D;
 	std::vector<SoundEvent> events3D;
-};
+};*/
 

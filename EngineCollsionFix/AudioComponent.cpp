@@ -1,4 +1,4 @@
-#include "AudioComponent.h"
+/*#include "AudioComponent.h"
 #include "Actor.h"
 #include "Game.h"
 #include "AudioSystem.h"
@@ -61,7 +61,7 @@ void AudioComponent::onUpdateWorldTransform()
 
 SoundEvent AudioComponent::playEvent(const std::string& name)
 {
-	SoundEvent e = owner.getGame().getAudioSystem().playEvent(name);
+	//SoundEvent e = owner.getGame().getAudioSystem().playEvent(name);
 	// Is this 2D or 3D?
 	if (e.is3D())
 	{
@@ -90,4 +90,4 @@ void AudioComponent::stopAllEvents()
 	// Clear events
 	events2D.clear();
 	events3D.clear();
-}
+}*/
