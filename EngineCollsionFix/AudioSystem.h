@@ -5,7 +5,7 @@
 // Released under the BSD License
 // See LICENSE in root directory for full details.
 // ----------------------------------------------------------------
-
+/*
 #pragma once
 #include <unordered_map>
 #include <string>
@@ -71,4 +71,4 @@ private:
 	FMOD::Studio::System* system;
 	// FMOD Low-level system (in case needed)
 	FMOD::System* lowLevelSystem;
-};
+};*/

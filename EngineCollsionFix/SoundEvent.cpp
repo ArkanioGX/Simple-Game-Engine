@@ -5,7 +5,7 @@
 // Released under the BSD License
 // See LICENSE in root directory for full details.
 // ----------------------------------------------------------------
-
+/*
 #include "SoundEvent.h"
 #include "AudioSystem.h"
 #include <fmod_studio.hpp>
@@ -36,7 +36,7 @@ void SoundEvent::restart()
 	}
 }
 
-void SoundEvent::stop(bool allowFadeOut /* true */)
+void SoundEvent::stop(bool allowFadeOut)
 {
 	auto event = system ? system->getEventInstance(id) : nullptr;
 	if (event)
@@ -175,4 +175,4 @@ void SoundEvent::set3DAttributes(const Matrix4& worldTrans)
 		attr.velocity = { 0.0f, 0.0f, 0.0f };
 		event->set3DAttributes(&attr);
 	}
-}
+}*/

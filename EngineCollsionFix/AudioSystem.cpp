@@ -5,7 +5,7 @@
 // Released under the BSD License
 // See LICENSE in root directory for full details.
 // ----------------------------------------------------------------
-
+/*
 #include "AudioSystem.h"
 #include "Log.h"
 #include "Game.h"
@@ -349,4 +349,4 @@ FMOD::Studio::EventInstance* AudioSystem::getEventInstance(unsigned int id)
 		event = iter->second;
 	}
 	return event;
-}
+}*/

@@ -31,5 +31,5 @@ void BallActor::setPlayer(Actor* player)
 
 void BallActor::hitTarget()
 {
-	audio->playEvent("event:/Ding");
+	//audio->playEvent("event:/Ding");
 }

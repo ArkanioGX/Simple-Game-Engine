@@ -10,7 +10,7 @@ AudioComponent::AudioComponent(Actor* owner, int updateOrder):
 
 AudioComponent::~AudioComponent()
 {
-	stopAllEvents();
+	//stopAllEvents();
 }
 
 void AudioComponent::update(float dt)
@@ -18,7 +18,7 @@ void AudioComponent::update(float dt)
 	Component::update(dt);
 
 	// Remove invalid 2D events
-	auto iter = events2D.begin();
+	/*auto iter = events2D.begin();
 	while (iter != events2D.end())
 	{
 		if (!iter->isValid())
@@ -43,22 +43,22 @@ void AudioComponent::update(float dt)
 		{
 			++iter;
 		}
-	}
+	}*/
 }
 
 void AudioComponent::onUpdateWorldTransform()
 {
 	// Update 3D events' world transforms
 	Matrix4 world = owner.getWorldTransform();
-	for (auto& event : events3D)
+	/*for (auto& event : events3D)
 	{
 		if (event.isValid())
 		{
 			event.set3DAttributes(world);
 		}
-	}
+	}*/
 }
-
+/*
 SoundEvent AudioComponent::playEvent(const std::string& name)
 {
 	SoundEvent e = owner.getGame().getAudioSystem().playEvent(name);
@@ -91,3 +91,4 @@ void AudioComponent::stopAllEvents()
 	events2D.clear();
 	events3D.clear();
 }
+*/

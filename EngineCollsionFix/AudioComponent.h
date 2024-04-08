@@ -13,10 +13,10 @@ public:
 	void update(float dt) override;
 	void onUpdateWorldTransform() override;
 
-	SoundEvent playEvent(const std::string& name);
-	void stopAllEvents();
+	//SoundEvent playEvent(const std::string& name);
+	//void stopAllEvents();
 private:
-	std::vector<SoundEvent> events2D;
-	std::vector<SoundEvent> events3D;
+	//std::vector<SoundEvent> events2D;
+	//std::vector<SoundEvent> events3D;
 };
 

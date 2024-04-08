@@ -22,7 +22,7 @@ private:
 	class MeshComponent* meshComponent;
 	class FPSCameraComponent* cameraComponent;
 	class Actor* FPSModel;
-	SoundEvent footstep;
+	//SoundEvent footstep;
 	float lastFootstep;
 	class BoxComponent* boxComponent;
 };
