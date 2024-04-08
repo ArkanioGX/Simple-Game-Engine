@@ -157,6 +157,9 @@
     <ClCompile Include="TargetActor.cpp">
       <Filter>Prefabs</Filter>
     </ClCompile>
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="UIScreen.cpp" />
+    <ClCompile Include="PauseScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -323,6 +326,10 @@
     <ClInclude Include="TargetActor.h">
       <Filter>Prefabs</Filter>
     </ClInclude>
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="UIScreen.h" />
+    <ClInclude Include="PauseScreen.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">
