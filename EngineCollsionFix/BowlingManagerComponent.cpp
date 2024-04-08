@@ -34,7 +34,7 @@ void BowlingManagerComponent::placePins()
 	//Pins Placement
 	Vector3 basePos = Vector3(-90, 0, -98);
 	float nRange = 4;
-	float size = 180;
+	float size = 175;
 	for (int n = nRange; n > 0; n--) {
 		for (int i = 0; i < n; i++) {
 			PinActor* pin = new PinActor();
