@@ -160,6 +160,9 @@
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="UIScreen.cpp" />
     <ClCompile Include="PauseScreen.cpp" />
+    <ClCompile Include="BoneTransform.cpp" />
+    <ClCompile Include="Skeleton.cpp" />
+    <ClCompile Include="Animation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -330,6 +333,9 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="UIScreen.h" />
     <ClInclude Include="PauseScreen.h" />
+    <ClInclude Include="BoneTransform.h" />
+    <ClInclude Include="Skeleton.h" />
+    <ClInclude Include="Animation.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Components">
