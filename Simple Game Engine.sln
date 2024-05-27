@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Simple Game Engine", "Simple Game Engine\Simple Game Engine.vcxproj", "{572C9A34-8DD0-4266-98F0-D61AE469514D}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProjectPart2Finished", "SimpleEngineWithOpenGL-023\SimpleEngineWithOpenGL-023.vcxproj", "{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CollisionFix", "EngineCollsionFix\SimpleEngineWithOpenGL-036.vcxproj", "{E35D91DB-BA2E-4B67-9141-CF0879176ABB}"
 EndProject
 Global
@@ -17,22 +13,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{572C9A34-8DD0-4266-98F0-D61AE469514D}.Debug|x64.ActiveCfg = Debug|x64
-		{572C9A34-8DD0-4266-98F0-D61AE469514D}.Debug|x64.Build.0 = Debug|x64
-		{572C9A34-8DD0-4266-98F0-D61AE469514D}.Debug|x86.ActiveCfg = Debug|Win32
-		{572C9A34-8DD0-4266-98F0-D61AE469514D}.Debug|x86.Build.0 = Debug|Win32
-		{572C9A34-8DD0-4266-98F0-D61AE469514D}.Release|x64.ActiveCfg = Release|x64
-		{572C9A34-8DD0-4266-98F0-D61AE469514D}.Release|x64.Build.0 = Release|x64
-		{572C9A34-8DD0-4266-98F0-D61AE469514D}.Release|x86.ActiveCfg = Release|Win32
-		{572C9A34-8DD0-4266-98F0-D61AE469514D}.Release|x86.Build.0 = Release|Win32
-		{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}.Debug|x64.ActiveCfg = Debug|x64
-		{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}.Debug|x64.Build.0 = Debug|x64
-		{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}.Debug|x86.ActiveCfg = Debug|Win32
-		{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}.Debug|x86.Build.0 = Debug|Win32
-		{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}.Release|x64.ActiveCfg = Release|x64
-		{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}.Release|x64.Build.0 = Release|x64
-		{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}.Release|x86.ActiveCfg = Release|Win32
-		{6A48CD46-0A92-4BAE-A579-E50A3A1AD6B1}.Release|x86.Build.0 = Release|Win32
 		{E35D91DB-BA2E-4B67-9141-CF0879176ABB}.Debug|x64.ActiveCfg = Debug|x64
 		{E35D91DB-BA2E-4B67-9141-CF0879176ABB}.Debug|x64.Build.0 = Debug|x64
 		{E35D91DB-BA2E-4B67-9141-CF0879176ABB}.Debug|x86.ActiveCfg = Debug|Win32
